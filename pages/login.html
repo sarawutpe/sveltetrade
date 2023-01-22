@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>i design</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets//css/fabric-icons.css" />
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+  </head>
+  <body>
+    <!-- loader -->
+    <div id="loader">
+      <fluent-progress-ring></fluent-progress-ring>
+    </div>
+
+    <form action="" method="post"></form>
+
+    <div id="portal">
+      <!-- start portal-menu -->
+      <div class="portal-menu">
+        <div class="container">
+          <div class="menu">
+            <div class="portal-logo">
+              <img src="./assets/img/logo.png" alt="logo" />
+            </div>
+            <div id="mobile-menu-icon">
+              <i class="ms-Icon ms-Icon--Waffleonice365 fontSize-xl"></i>
+            </div>
+            <div class="avatar-group">
+              <img class="avatar" src="./assets/img/avatar.jpeg" draggable="false" alt="avatar" />
+              <div class="text">
+                <span class="fontSize-l">Mr. John</span>
+                <div>
+                  <span class="fontSize-l">$ 0.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-group">
+              <a href="index.html" class="menu-item active">
+                <i class="ms-Icon ms-Icon--Home fontSize-xl"></i>
+                <span>Home</span>
+              </a>
+              <a href="deposit.html" class="menu-item">
+                <i class="ms-Icon ms-Icon--Money fontSize-xl"></i>
+                <span>Deposit</span>
+              </a>
+              <a href="withdraw.html" class="menu-item">
+                <i class="ms-Icon ms-Icon--Bank fontSize-xl"></i>
+                <span>Withdraw</span>
+              </a>
+              <a href="history.html" class="menu-item">
+                <i class="ms-Icon ms-Icon--LineChart fontSize-xl"></i>
+                <span>History</span>
+              </a>
+              <a href="referrals.html" class="menu-item">
+                <i class="ms-Icon ms-Icon--SplitObject fontSize-xl"></i>
+                <span>Referrals</span>
+              </a>
+              <a href="security.html" class="menu-item">
+                <i class="ms-Icon ms-Icon--AuthenticatorApp fontSize-xl"></i>
+                <span>Security</span>
+              </a>
+              <a href="settings.html" class="menu-item">
+                <i class="ms-Icon ms-Icon--Settings fontSize-xl"></i>
+                <span>Settings</span>
+              </a>
+              <a href="exit.html" class="menu-item">
+                <i class="ms-Icon ms-Icon--Sigonut fontSize-xl"></i>
+                <span>Exit</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end portal-menu -->
+
+      <div id="portal-content">
+        <div class="container">
+          <fluent-card class="card">
+            <div class="flex justify-content-space-around flex-wrap">
+              <section>
+                <div class="form-control">
+                  <span class="fontSize-xl fontWeight-regular mb-2">Login</span>
+                  <form id="login" action="">
+                    <div class="field">
+                      <fluent-text-field class="w-100" id="username" type="text" name="username" appearance="outline"
+                        >Username</fluent-text-field
+                      >
+                    </div>
+                    <div class="field">
+                      <fluent-text-field
+                        class="w-100"
+                        id="password"
+                        type="password"
+                        name="password"
+                        appearance="outline"
+                        >Password</fluent-text-field
+                      >
+                    </div>
+                    <div class="action">
+                      <fluent-button type="submit" appearance="accent">Sign in</fluent-button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+
+              <section>
+                <!-- keyboar -->
+                <div id="keyboard">
+                  <ul class="key-group">
+                    <li class="key symbol">
+                      <span class="on" style="display: block">`</span><span class="hide">~</span>
+                    </li>
+                    <li class="key symbol"><span class="on" style>1</span><span class="hide">!</span></li>
+                    <li class="key symbol"><span class="on" style>2</span><span class="hide">@</span></li>
+                    <li class="key symbol"><span class="on" style>3</span><span class="hide">#</span></li>
+                    <li class="key symbol"><span class="on" style>4</span><span class="hide">$</span></li>
+                    <li class="key symbol"><span class="on" style>5</span><span class="hide">%</span></li>
+                    <li class="key symbol"><span class="on" style>6</span><span class="hide">^</span></li>
+                    <li class="key symbol"><span class="on" style>7</span><span class="hide">&amp;</span></li>
+                    <li class="key symbol"><span class="on" style>8</span><span class="hide">*</span></li>
+                    <li class="key symbol"><span class="on" style>9</span><span class="hide">(</span></li>
+                    <li class="key symbol"><span class="on" style>0</span><span class="hide">)</span></li>
+                    <li class="key symbol"><span class="on" style>-</span><span class="hide">_</span></li>
+                    <li class="key symbol"><span class="on" style>=</span><span class="hide">+</span></li>
+                    <li id="delete" style="width: 53px">Delete</li>
+                    <li id="tab" style="width: 53px; clear: left">Tab</li>
+                    <li class="key letter">q</li>
+                    <li class="key letter">w</li>
+                    <li class="key letter">e</li>
+                    <li class="key letter">r</li>
+                    <li class="key letter">t</li>
+                    <li class="key letter">y</li>
+                    <li class="key letter">u</li>
+                    <li class="key letter">i</li>
+                    <li class="key letter">o</li>
+                    <li class="key letter">p</li>
+                    <li class="key symbol"><span class="on" style>[</span><span class="hide">{</span></li>
+                    <li class="key symbol"><span class="on" style>]</span><span class="hide">}</span></li>
+                    <li class="key symbol"><span class="on" style>\</span><span class="hide">|</span></li>
+                    <li id="caps" style="width: 66px; clear: left">Caps</li>
+                    <li class="key letter">a</li>
+                    <li class="key letter">s</li>
+                    <li class="key letter">d</li>
+                    <li class="key letter">f</li>
+                    <li class="key letter">g</li>
+                    <li class="key letter">h</li>
+                    <li class="key letter">j</li>
+                    <li class="key letter">k</li>
+                    <li class="key letter">l</li>
+                    <li class="key symbol"><span class="on" style>;</span><span class="hide">:</span></li>
+                    <li class="key symbol"><span class="on" style>'</span><span class="hide">"</span></li>
+                    <li id="enter" style="width: 35px">Enter</li>
+                    <li id="l-shift" style="width: 82px; clear: left">Shift</li>
+                    <li class="key letter">z</li>
+                    <li class="key letter">x</li>
+                    <li class="key letter">c</li>
+                    <li class="key letter">v</li>
+                    <li class="key letter">b</li>
+                    <li class="key letter">n</li>
+                    <li class="key letter">m</li>
+                    <li class="key symbol"><span class="on" style>,</span><span class="hide">&lt;</span></li>
+                    <li class="key symbol"><span class="on" style>.</span><span class="hide">&gt;</span></li>
+                    <li class="key symbol"><span class="on" style>/</span><span class="hide">?</span></li>
+                    <li id="r-shift" style="width: 45px">Shift</li>
+                    <br />
+                    <li id="space" style="width: 99%">&nbsp;</li>
+                  </ul>
+                </div>
+                <!-- end keyboard -->
+              </section>
+            </div>
+          </fluent-card>
+
+          <br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

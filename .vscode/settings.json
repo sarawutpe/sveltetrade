@@ -1,0 +1,19 @@
+{
+  "editor.tabSize": 2,
+  // "editor.insertSpaces": true,
+  // "html.format.indentInnerHtml": false,
+  // "html.format.maxPreserveNewLines": null,
+  // "html.format.preserveNewLines": true,
+  // "html.format.wrapAttributes": "auto",
+  // "html.format.wrapLineLength": 120,
+  // "editor.semicolons": true,
+  "prettier.semi": true,
+  "editor.formatOnSave": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.syntaxProfiles": {
+    "tpl": "html"
+  },
+  "emmet.includeLanguages": {
+    "smarty": "html"
+  }
+}
