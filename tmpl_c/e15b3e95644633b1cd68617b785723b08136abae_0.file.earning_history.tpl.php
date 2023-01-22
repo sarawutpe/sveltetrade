@@ -1,89 +1,145 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-22 05:41:43
-         compiled from "C:\xampp\htdocs\sveltetrade\tmpl\referals.tpl" */ ?>
+<?php /* Smarty version 3.1.27, created on 2023-01-22 05:41:54
+         compiled from "C:\xampp\htdocs\sveltetrade\tmpl\earning_history.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:149610678463ccbe87122ab0_24214230%%*/
+/*%%SmartyHeaderCode:114414751963ccbe925fef10_35849117%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'cc23e771a4fcf072c485189bf6b673ea751f3e83' => 
+    'e15b3e95644633b1cd68617b785723b08136abae' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\referals.tpl',
+      0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\earning_history.tpl',
       1 => 1667121599,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '149610678463ccbe87122ab0_24214230',
+  'nocache_hash' => '114414751963ccbe925fef10_35849117',
   'variables' => 
   array (
-    'upline' => 0,
-    'total_ref' => 0,
-    'active_ref' => 0,
-    'currency_sign' => 0,
-    'commissions' => 0,
-    'settings' => 0,
-    'month' => 0,
+    'current_page' => 0,
+    'options' => 0,
+    'ecs' => 0,
     'frm' => 0,
+    'month' => 0,
     'day' => 0,
     'year' => 0,
-    'show_refstat' => 0,
-    'refstat' => 0,
-    'show_referals' => 0,
-    'referals' => 0,
-    'cnt_other' => 0,
-    'cnt_other_active' => 0,
+    'trans' => 0,
+    't' => 0,
+    'return' => 0,
+    'totals' => 0,
+    'paginator' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63ccbe8716cfe5_04530620',
+  'unifunc' => 'content_63ccbe926493e1_19251723',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63ccbe8716cfe5_04530620')) {
-function content_63ccbe8716cfe5_04530620 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63ccbe926493e1_19251723')) {
+function content_63ccbe926493e1_19251723 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '149610678463ccbe87122ab0_24214230';
+$_smarty_tpl->properties['nocache_hash'] = '114414751963ccbe925fef10_35849117';
 ?>
-          <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"Referrals"), 0);
+          <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"History"), 0);
 ?>
 
-          <span class="fontSize-xl fontWeight-regular mb-3">Referrals</span>
-
-          <?php if ($_smarty_tpl->tpl_vars['upline']->value['email'] != '') {?>
-          <span class="fontSize-mPlus mb-3">Your upline is <a href=mailto:<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['upline']->value['email']);?>
-><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['upline']->value['name']);?>
-</a></span>
-          <?php }?>
+          <span class="fontSize-xl fontWeight-regular mb-3">History</span>
           
-          <fluent-card class="card flex justify-content-between">
-            <span class="fontSize-mPlus fontWeight-regular">Referrals</span>
-            <span class="fontSize-m"><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['total_ref']->value);?>
-</span>
-          </fluent-card>
-          <fluent-card class="card flex justify-content-between">
-            <span class="fontSize-mPlus fontWeight-regular">Active referrals</span>
-            <span class="fontSize-m"><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['active_ref']->value);?>
-</span>
-          </fluent-card>
-          <fluent-card class="card flex justify-content-between">
-            <span class="fontSize-mPlus fontWeight-regular">Total referral commission</span>
-            <span class="fontSize-m"><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['currency_sign']->value);
-echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['commissions']->value);?>
-</span>
-          </fluent-card>
+          <?php echo '<script'; ?>
+ language=javascript>
+              function go(p) {
+                document.opts.page.value = p;
+                document.opts.submit();
+              }
+          <?php echo '</script'; ?>
+>
+          
+          
+          <form class="mb-3" method="post" name="opts">
+              <input type="hidden" name="a" value="history">
+              <input type="hidden" name="page" value=<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['current_page']->value);?>
+>
+              <div class="flex flex-xs-column justify-content-between flex-wrap">
+                
+                <div class="mb-1">
+                    <div class="mb-1">
+                      <span class="fontSize-mPlus fontWeight-regular mb-1">Select Type</span>
+                      <fluent-select class="select" position="below" name="type" onchange="document.opts.submit();">
+                          <fluent-option value="1">All transactions</fluent-option>
+                          <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['opt'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['opt']);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['name'] = 'opt';
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['options']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['show'] = true;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['loop'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['step'] = 1;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['loop']-1;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['show']) {
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['loop'];
+    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['total'] == 0)
+        $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['show'] = false;
+} else
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['total'] = 0;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['show']):
 
-          <br>
+            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['iteration'] = 1;
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['total'];
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['iteration']++):
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['iteration'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['iteration'] == 1);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['opt']['total']);
+?>
+                          <fluent-option value="<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['options']->value[$_smarty_tpl->getVariable('smarty')->value['section']['opt']['index']]['type']);?>
+" <?php if ($_smarty_tpl->tpl_vars['options']->value[$_smarty_tpl->getVariable('smarty')->value['section']['opt']['index']]['selected']) {?>selected<?php }?>><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['options']->value[$_smarty_tpl->getVariable('smarty')->value['section']['opt']['index']]['type_name']);?>
+</fluent-option>
+                          <?php endfor; endif; ?>
+                      </fluent-select>
+                    </div>
+                    <?php if ($_smarty_tpl->tpl_vars['ecs']->value) {?>
+                    
+                    <div class="mb-1">
+                      <fluent-select class="select" name="ec" position="below" onchange="document.opts.submit();">
+                          <fluent-option value="1">All eCurrencies</fluent-option>
+                          <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['ec'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['ec']);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['name'] = 'ec';
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['ecs']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['show'] = true;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['loop'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['step'] = 1;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['loop']-1;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['show']) {
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['loop'];
+    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['total'] == 0)
+        $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['show'] = false;
+} else
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['total'] = 0;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['show']):
 
-          <?php if ($_smarty_tpl->tpl_vars['settings']->value['show_refstat']) {?>
-          <h3>Referral ins/signups</h3><br>
-          <table cellspacing=0 cellpadding=1 border=0>
-            <form method=post name=opts>
-            <input type=hidden name=a value=referals>
-            <td align=right>
-            From: </td>
-            <td>
-            <select name=month_from class=inpts>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['month_from'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']);
+            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['iteration'] = 1;
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['total'];
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['iteration']++):
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['iteration'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['iteration'] == 1);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['ec']['total']);
+?>
+                          <fluent-option value=<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['ecs']->value[$_smarty_tpl->getVariable('smarty')->value['section']['ec']['index']]['id']);?>
+ <?php if ($_smarty_tpl->tpl_vars['frm']->value['ec'] == $_smarty_tpl->tpl_vars['ecs']->value[$_smarty_tpl->getVariable('smarty')->value['section']['ec']['index']]['id']) {?>selected<?php }?>><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['ecs']->value[$_smarty_tpl->getVariable('smarty')->value['section']['ec']['index']]['name']);?>
+</fluent-option>
+                          <?php endfor; endif; ?>
+                      </fluent-select>
+                    </div>
+                    <?php }?>
+                </div>
+                
+                <div class="mb-1">
+                    <div class="mb-1">
+                      <span class="fontSize-mPlus fontWeight-regular mb-1">Select period</span>
+                      <span class="fontSize-sPlus is-xs">Form</span>
+                      <fluent-select class="select small" position="below" name="month_from" onchange="document.opts.submit();">
+                          <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['month_from'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['name'] = 'month_from';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['month']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['show'] = true;
@@ -107,13 +163,13 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['index_next'] =
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['month_from']['total']);
 ?>
-            <option value=<?php echo smarty_modifier_myescape($_smarty_tpl->getVariable('smarty')->value['section']['month_from']['index']+1);?>
+                          <fluent-option value=<?php echo smarty_modifier_myescape($_smarty_tpl->getVariable('smarty')->value['section']['month_from']['index']+1);?>
  <?php if ($_smarty_tpl->getVariable('smarty')->value['section']['month_from']['index']+1 == $_smarty_tpl->tpl_vars['frm']->value['month_from']) {?>selected<?php }?>><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['month']->value[$_smarty_tpl->getVariable('smarty')->value['section']['month_from']['index']]);?>
-
-            <?php endfor; endif; ?>
-            </select> &nbsp;
-            <select name=day_from class=inpts>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['day_from'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']);
+</fluent-option>
+                          <?php endfor; endif; ?>
+                      </fluent-select>
+                      <fluent-select class="select small" position="below" name="day_from" onchange="document.opts.submit();">
+                          <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['day_from'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['name'] = 'day_from';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['day']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['show'] = true;
@@ -137,13 +193,13 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['index_next'] = $
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['day_from']['total']);
 ?>
-            <option value=<?php echo smarty_modifier_myescape($_smarty_tpl->getVariable('smarty')->value['section']['day_from']['index']+1);?>
+                          <fluent-option value=<?php echo smarty_modifier_myescape($_smarty_tpl->getVariable('smarty')->value['section']['day_from']['index']+1);?>
  <?php if ($_smarty_tpl->getVariable('smarty')->value['section']['day_from']['index']+1 == $_smarty_tpl->tpl_vars['frm']->value['day_from']) {?>selected<?php }?>><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['day']->value[$_smarty_tpl->getVariable('smarty')->value['section']['day_from']['index']]);?>
-
-            <?php endfor; endif; ?>
-            </select> &nbsp;
-            <select name=year_from class=inpts>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['year_from'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']);
+</fluent-option>
+                          <?php endfor; endif; ?>
+                      </fluent-select>
+                      <fluent-select class="select small" position="below" name="year_from" onchange="document.opts.submit();">
+                          <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['year_from'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['name'] = 'year_from';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['year']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['show'] = true;
@@ -167,18 +223,19 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['index_next'] = 
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['year_from']['total']);
 ?>
-            <option value=<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['year']->value[$_smarty_tpl->getVariable('smarty')->value['section']['year_from']['index']]);?>
+                          <fluent-option value=<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['year']->value[$_smarty_tpl->getVariable('smarty')->value['section']['year_from']['index']]);?>
  <?php if ($_smarty_tpl->tpl_vars['year']->value[$_smarty_tpl->getVariable('smarty')->value['section']['year_from']['index']] == $_smarty_tpl->tpl_vars['frm']->value['year_from']) {?>selected<?php }?>><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['year']->value[$_smarty_tpl->getVariable('smarty')->value['section']['year_from']['index']]);?>
-
-            <?php endfor; endif; ?>
-            </select>
-            </td>
-            <td rowspan=2>
-              &nbsp; <input type=submit value="Go" class=sbmt>
-            </td>
-            </tr>
-            <tr><td align=right>To:</td><td> <select name=month_to class=inpts>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['month_to'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']);
+</fluent-option>
+                          <?php endfor; endif; ?>
+                      </fluent-select>
+                      
+                      <br>
+                    </div>
+                    
+                    <div class="mb-1">
+                      <span class="fontSize-sPlus is-xs">To</span>
+                      <fluent-select class="select small" position="below" name="month_to" onchange="document.opts.submit();">
+                          <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['month_to'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['name'] = 'month_to';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['month']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['show'] = true;
@@ -202,13 +259,13 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['index_next'] = $
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['month_to']['total']);
 ?>
-            <option value=<?php echo smarty_modifier_myescape($_smarty_tpl->getVariable('smarty')->value['section']['month_to']['index']+1);?>
+                          <fluent-option class="option" value=<?php echo smarty_modifier_myescape($_smarty_tpl->getVariable('smarty')->value['section']['month_to']['index']+1);?>
  <?php if ($_smarty_tpl->getVariable('smarty')->value['section']['month_to']['index']+1 == $_smarty_tpl->tpl_vars['frm']->value['month_to']) {?>selected<?php }?>><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['month']->value[$_smarty_tpl->getVariable('smarty')->value['section']['month_to']['index']]);?>
-
-            <?php endfor; endif; ?>
-            </select> &nbsp;
-            <select name=day_to class=inpts>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['day_to'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']);
+</fluent-option>
+                          <?php endfor; endif; ?>
+                      </fluent-select>
+                      <fluent-select class="select small" position="below" name="day_to" onchange="document.opts.submit();">
+                          <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['day_to'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['name'] = 'day_to';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['day']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['show'] = true;
@@ -232,14 +289,13 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['index_next'] = $_s
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['day_to']['total']);
 ?>
-            <option value=<?php echo smarty_modifier_myescape($_smarty_tpl->getVariable('smarty')->value['section']['day_to']['index']+1);?>
+                          <fluent-option class="option" value=<?php echo smarty_modifier_myescape($_smarty_tpl->getVariable('smarty')->value['section']['day_to']['index']+1);?>
  <?php if ($_smarty_tpl->getVariable('smarty')->value['section']['day_to']['index']+1 == $_smarty_tpl->tpl_vars['frm']->value['day_to']) {?>selected<?php }?>><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['day']->value[$_smarty_tpl->getVariable('smarty')->value['section']['day_to']['index']]);?>
-
-            <?php endfor; endif; ?>
-            </select> &nbsp;
-
-            <select name=year_to class=inpts>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['year_to'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']);
+</fluent-option>
+                          <?php endfor; endif; ?>
+                      </fluent-select>
+                      <fluent-select class="select small" position="below" name="year_to" onchange="document.opts.submit();">
+                          <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['year_to'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['name'] = 'year_to';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['year']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['show'] = true;
@@ -263,167 +319,111 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['index_next'] = $_
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['year_to']['total']);
 ?>
-            <option value=<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['year']->value[$_smarty_tpl->getVariable('smarty')->value['section']['year_to']['index']]);?>
+                          <fluent-option class="option" value=<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['year']->value[$_smarty_tpl->getVariable('smarty')->value['section']['year_to']['index']]);?>
  <?php if ($_smarty_tpl->tpl_vars['year']->value[$_smarty_tpl->getVariable('smarty')->value['section']['year_to']['index']] == $_smarty_tpl->tpl_vars['frm']->value['year_to']) {?>selected<?php }?>><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['year']->value[$_smarty_tpl->getVariable('smarty')->value['section']['year_to']['index']]);?>
-
-            <?php endfor; endif; ?>
-            </select>
-
-            </td>
-            </tr>
-            </form>
-          </table>
-
-          <table width=300 celspacing=1 cellpadding=1 border=0>
-            <tr>
-              <td class=inheader>Date</td>
-              <td class=inheader>Ins</td>
-              <td class=inheader>Signups</td>
-            </tr>
-            <?php if ($_smarty_tpl->tpl_vars['show_refstat']->value) {?>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['s'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['s']);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['name'] = 's';
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['refstat']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['show'] = true;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['loop'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'] = 1;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['loop']-1;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['show']) {
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['loop'];
-    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total'] == 0)
-        $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['show'] = false;
-} else
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total'] = 0;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['show']):
-
-            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'] = 1;
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total'];
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration']++):
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'] == 1);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total']);
+</fluent-option>
+                          <?php endfor; endif; ?>
+                      </fluent-select>
+                    </div>
+                </div>
+              </div>
+          </form>
+          
+          <div class="table-responsive">
+          <table>
+              <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+              </thead>
+              <?php
+$_from = $_smarty_tpl->tpl_vars['trans']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$_smarty_tpl->tpl_vars['t'] = new Smarty_Variable;
+$_smarty_tpl->tpl_vars['t']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['t']->value) {
+$_smarty_tpl->tpl_vars['t']->_loop = true;
+$foreach_t_Sav = $_smarty_tpl->tpl_vars['t'];
 ?>
-            <tr>
-              <td class=item align=center><b><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['refstat']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['date']);?>
-</b></td>
-              <td class=item align=right><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['refstat']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['income']);?>
+              <tbody>
+                <tr>
+                    <td><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['t']->value['transtype']);?>
 </td>
-              <td class=item align=right><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['refstat']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['reg']);?>
+                    <td>
+                      <div class="flex align-items-center">   
+                      <span class="mr-1"><?php echo smarty_modifier_myescape(amount_smarty_fiat($_smarty_tpl->tpl_vars['t']->value['amount'],$_smarty_tpl->tpl_vars['t']->value['ec']));?>
+</span>
+                      <img class="img-currency" src="images/<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['t']->value['ec']);?>
+.gif"><?php if ($_smarty_tpl->tpl_vars['t']->value['type'] == 'withdraw_pending') {?><a href="<?php echo smarty_modifier_myescape(encurl("?a=cancelwithdraw&id=".((string)$_smarty_tpl->tpl_vars['t']->value['id'])."&return=".((string)$_smarty_tpl->tpl_vars['return']->value)."&"));?>
+" onclick="return confirm('Are you sure you want to delete this request?')">[cancel]</a><?php }?>
+                      </div>
+                    </td>
+                    <td valign="bottom"><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['t']->value['d']);?>
 </td>
-            </tr>
-            <?php endfor; endif; ?>
-            <?php } else { ?>
-            <tr>
-              <td class=item align=center colspan=3>No statistics found for this period.</td>
-            </tr>
-            <?php }?>
-          </table>
-          <br>
-          <?php }?>
-
-          <?php if ($_smarty_tpl->tpl_vars['settings']->value['show_referals']) {?>
-          <?php if ($_smarty_tpl->tpl_vars['show_referals']->value) {?>
-          <h3>Your referrals:</h3>
-          <table cellspacing=1 cellpadding=1 border=0>
-            <tr>
-              <td class=inheader>Nickname</td>
-              <td class=inheader>E-mail</td>
-              <td class=inheader>Status</td>
-            </tr>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['s'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['s']);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['name'] = 's';
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['referals']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['show'] = true;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['loop'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'] = 1;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['loop']-1;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['show']) {
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['loop'];
-    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total'] == 0)
-        $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['show'] = false;
-} else
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total'] = 0;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['show']):
-
-            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'] = 1;
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total'];
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration']++):
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'] == 1);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['s']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['s']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['s']['total']);
+                </tr>
+                <tr>
+                    <td colspan="3">
+                      <span class="fontSize-xs"><?php if ($_smarty_tpl->tpl_vars['t']->value['description']) {
+echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['t']->value['description'], ENT_QUOTES, 'UTF-8', true));
+} else { ?>&nbsp;<?php }?></span>
+                    </td>
+                </tr>
+                <?php
+$_smarty_tpl->tpl_vars['t'] = $foreach_t_Sav;
+}
+if (!$_smarty_tpl->tpl_vars['t']->_loop) {
 ?>
-            <tr>
-              <td class=item><b><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['username']);?>
-</b></td>
-              <td class=item><a href=mailto:<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['email']);?>
-><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['email']);?>
-</a></td>
-              <td class=item><?php if ($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['q_deposits'] > 0) {?>Deposited<?php } else { ?>No deposit yet<?php }?></td>
-            </tr>
-            <?php if ($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['ref_stats']) {?>
-            <tr>
-              <td colspan=3>
-                User referrals:
-                <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['l'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['l']);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['name'] = 'l';
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['ref_stats']) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['show'] = true;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['loop'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['step'] = 1;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['loop']-1;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['l']['show']) {
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['loop'];
-    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['l']['total'] == 0)
-        $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['show'] = false;
-} else
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['total'] = 0;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['l']['show']):
-
-            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['l']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['iteration'] = 1;
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['total'];
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['iteration']++):
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['iteration'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['l']['iteration'] == 1);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['l']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['l']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['l']['total']);
+                <tr>
+                    <td colspan="3">No transactions found</td>
+                </tr>
+                <?php
+}
 ?>
-                <nobr><?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['ref_stats'][$_smarty_tpl->getVariable('smarty')->value['section']['l']['index']]['cnt_active']);?>
- active of <?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['ref_stats'][$_smarty_tpl->getVariable('smarty')->value['section']['l']['index']]['cnt']);?>
- on level <?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['ref_stats'][$_smarty_tpl->getVariable('smarty')->value['section']['l']['index']]['level']);
-if (!$_smarty_tpl->getVariable('smarty')->value['section']['l']['last']) {?>;<?php }?></nobr>
-                <?php endfor; endif; ?>
-              </td>
-            </tr>
-            <?php }?>
-            <?php if ($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['came_from']) {?>
-            <tr><td colspan=3>
-            <a href="<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['referals']->value[$_smarty_tpl->getVariable('smarty')->value['section']['s']['index']]['came_from']);?>
-" target=_blank>[User came from]</a>
-            </td></tr>
-            <?php }?>
-            <?php endfor; endif; ?>
-            <tr>
-              <td colspan=3>&nbsp;</td>
-            </tr>
-            <tr>
-              <td colspan=3><b>2-10 level referrals:</b> <?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['cnt_other']->value);?>
-</td>
-            </tr>
-            <tr>
-              <td colspan=3><b>2-10 level active referrals:</b> <?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['cnt_other_active']->value);?>
-</td>
-            </tr>
+                <tr>
+                    <td colspan="3">&nbsp;
+                </td>
+                <?php if ($_smarty_tpl->tpl_vars['totals']->value) {?>
+                <tr>
+                    <td>
+                      <span class="fontWeight-regular">Total for selected options:</span>
+                    </td>
+                    <td nowrap>
+                    <?php
+$_from = $_smarty_tpl->tpl_vars['totals']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$_smarty_tpl->tpl_vars['t'] = new Smarty_Variable;
+$_smarty_tpl->tpl_vars['t']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['t']->value) {
+$_smarty_tpl->tpl_vars['t']->_loop = true;
+$foreach_t_Sav = $_smarty_tpl->tpl_vars['t'];
+?>
+                      <div class="flex align-items-center">
+                      <span class="mr-1"><?php echo smarty_modifier_myescape(amount_smarty_fiat($_smarty_tpl->tpl_vars['t']->value['amount'],$_smarty_tpl->tpl_vars['t']->value['ec']));?>
+</span>
+                      <img class="img-currency" src="images/<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['t']->value['ec']);?>
+.gif">
+                      </div>
+                    <br><?php
+$_smarty_tpl->tpl_vars['t'] = $foreach_t_Sav;
+}
+?>
+                    </td>
+                    <td></td>
+                </tr>
+                <?php }?>
+              </tbody>
           </table>
-          <?php }?>
-          <?php }?>
+          </div>
+          <?php echo paginator(array('col'=>$_smarty_tpl->tpl_vars['paginator']->value['col'],'cur'=>$_smarty_tpl->tpl_vars['paginator']->value['cur'],'url'=>"javascript:go('%s')"),$_smarty_tpl);?>
+
           <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
 
-<?php }
+}
 }
 ?>
