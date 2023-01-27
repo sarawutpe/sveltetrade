@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-15 10:16:25
+<?php /* Smarty version 3.1.27, created on 2023-01-24 17:19:47
          compiled from "my:hightcharts" */ ?>
 <?php
-/*%%SmartyHeaderCode:70262526863c3c469ca8840_75354452%%*/
+/*%%SmartyHeaderCode:101534273263d005239e4a33_79537526%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1722fe02dab74db983b6d5cf3b1add82ab5891cf' => 
     array (
       0 => 'my:hightcharts',
-      1 => 1673774185,
+      1 => 1674577187,
       2 => 'my',
     ),
   ),
-  'nocache_hash' => '70262526863c3c469ca8840_75354452',
+  'nocache_hash' => '101534273263d005239e4a33_79537526',
   'variables' => 
   array (
     'ecs' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63c3c469cacbc9_79913070',
+  'unifunc' => 'content_63d005239e87a1_57880629',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63c3c469cacbc9_79913070')) {
-function content_63c3c469cacbc9_79913070 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d005239e87a1_57880629')) {
+function content_63d005239e87a1_57880629 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '70262526863c3c469ca8840_75354452';
+$_smarty_tpl->properties['nocache_hash'] = '101534273263d005239e4a33_79537526';
 ?>
  <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"><?php echo '</script'; ?>

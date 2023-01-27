@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-22 10:18:00
+<?php /* Smarty version 3.1.27, created on 2023-01-27 23:06:48
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\header.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:92589280063ccff4892a9d5_38671087%%*/
+/*%%SmartyHeaderCode:119370534463d44af8b68537_92818337%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f86ba28358546effd62b91d897f5ab9ce2bd74d5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\header.tpl',
-      1 => 1674362278,
+      1 => 1674398913,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '92589280063ccff4892a9d5_38671087',
+  'nocache_hash' => '119370534463d44af8b68537_92818337',
   'variables' => 
   array (
     'settings' => 0,
@@ -22,14 +22,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63ccff48933250_23441691',
+  'unifunc' => 'content_63d44af8b703b2_55390649',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63ccff48933250_23441691')) {
-function content_63ccff48933250_23441691 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d44af8b703b2_55390649')) {
+function content_63d44af8b703b2_55390649 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '92589280063ccff4892a9d5_38671087';
+$_smarty_tpl->properties['nocache_hash'] = '119370534463d44af8b68537_92818337';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +76,7 @@ echo smarty_modifier_myescape("sticky");
             <div class="portal-logo">
               <a href="<?php echo smarty_modifier_myescape(encurl("/"));?>
 ">
-                <img src="./assets/img/logo.png" width="200px" height="25px" alt="logo" />
+                <img src="./assets/img/logo.png" width="180px" height="22px" alt="logo" />
               </a>
             </div>
             <?php if ($_smarty_tpl->tpl_vars['userinfo']->value['logged'] === 1) {?>

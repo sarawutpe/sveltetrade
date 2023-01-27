@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-15 10:19:02
+<?php /* Smarty version 3.1.27, created on 2023-01-24 17:20:40
          compiled from "my:admin_footer" */ ?>
 <?php
-/*%%SmartyHeaderCode:50003754363c3c506d3d205_23462267%%*/
+/*%%SmartyHeaderCode:7477198363d00558677e32_91245128%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c2b20d3aaeacf873df3ad2515e6faace0f837811' => 
     array (
       0 => 'my:admin_footer',
-      1 => 1673774342,
+      1 => 1674577240,
       2 => 'my',
     ),
   ),
-  'nocache_hash' => '50003754363c3c506d3d205_23462267',
+  'nocache_hash' => '7477198363d00558677e32_91245128',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63c3c506d3d810_28225158',
+  'unifunc' => 'content_63d005586784a1_76971976',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63c3c506d3d810_28225158')) {
-function content_63c3c506d3d810_28225158 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d005586784a1_76971976')) {
+function content_63d005586784a1_76971976 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '50003754363c3c506d3d205_23462267';
+$_smarty_tpl->properties['nocache_hash'] = '7477198363d00558677e32_91245128';
 ?>
  </td> </tr> </table> <!-- Main: END --> 
  </td> </tr> </table> </td> </tr> </table> </td> </tr> <tr> <td height="19" bgcolor="ff8d00"><div align="center" class="forCopyright">Powered with HYIP Manager Pro. <a href=http://www.goldcoders.com class="forCopyright">GoldCoders.com</a></div></td> 

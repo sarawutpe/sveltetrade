@@ -32,7 +32,7 @@
           <div class="header-nav">
             <div class="portal-logo">
               <a href="{"/"|encurl}">
-                <img src="./assets/img/logo.png" width="200px" height="25px" alt="logo" />
+                <img src="./assets/img/logo.png" width="180px" height="22px" alt="logo" />
               </a>
             </div>
             {if $userinfo.logged === 1}
