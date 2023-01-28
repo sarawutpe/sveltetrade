@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-28 07:57:07
+<?php /* Smarty version 3.1.27, created on 2023-01-28 16:20:23
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\withdrawal.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:108572906363d4c7433d7282_79068986%%*/
+/*%%SmartyHeaderCode:127633903763d53d37a75cb8_01654132%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '77c2a09e9be3b8edc6b2084e38cc898826db54d1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\withdrawal.tpl',
-      1 => 1673759736,
+      1 => 1674890921,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '108572906363d4c7433d7282_79068986',
+  'nocache_hash' => '127633903763d53d37a75cb8_01654132',
   'variables' => 
   array (
     'say' => 0,
@@ -42,14 +42,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d4c74342d6d2_34711523',
+  'unifunc' => 'content_63d53d37abea13_61820736',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d4c74342d6d2_34711523')) {
-function content_63d4c74342d6d2_34711523 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d53d37abea13_61820736')) {
+function content_63d53d37abea13_61820736 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '108572906363d4c7433d7282_79068986';
+$_smarty_tpl->properties['nocache_hash'] = '127633903763d53d37a75cb8_01654132';
 ?>
         <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"Withdrawal"), 0);
 ?>
@@ -59,7 +59,7 @@ $_smarty_tpl->properties['nocache_hash'] = '108572906363d4c7433d7282_79068986';
           
             function playSuccessAudio() {
               const audio = new Audio('../assets/utils/effect-success.mp3');
-              audio.play();
+              audio.play().catch(function(error) {});
             }
           
         <?php echo '</script'; ?>
@@ -285,7 +285,7 @@ echo smarty_modifier_myescape(amount_smarty_format($_smarty_tpl->tpl_vars['ab_fo
                   </div>
                   <div>
                     <fluent-tooltip id="tooltip" anchor="anchor-default">
-                      Show the eCurrency Available and Pending
+                      Show the eCurrency is available
                     </fluent-tooltip>
                     <i id="anchor-default" class="ms-Icon ms-Icon--Info fontSize-m mb-2 mr-1"></i>
                   </div>
@@ -311,8 +311,8 @@ $foreach_p_Sav = $_smarty_tpl->tpl_vars['p'];
 $_smarty_tpl->tpl_vars["wfch"] = new Smarty_Variable(0, null, 0);?>selected<?php }?>>
                       <?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['p']->value['name'], ENT_QUOTES, 'UTF-8', true));?>
  <?php echo smarty_modifier_myescape(amount_smarty_fiat($_smarty_tpl->tpl_vars['p']->value['available'],$_smarty_tpl->tpl_vars['p']->value['ec']));?>
- | <?php echo smarty_modifier_myescape(amount_smarty_fiat($_smarty_tpl->tpl_vars['p']->value['pending'],$_smarty_tpl->tpl_vars['p']->value['ec']));?>
 
+                      
                     </fluent-option>
                     <?php }?>
                     <?php

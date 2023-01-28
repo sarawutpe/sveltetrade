@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-28 07:57:08
+<?php /* Smarty version 3.1.27, created on 2023-01-28 16:27:19
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\header.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:82279850863d4c744233e28_09265468%%*/
+/*%%SmartyHeaderCode:1473200063d53ed7d419c4_18531100%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f86ba28358546effd62b91d897f5ab9ce2bd74d5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\header.tpl',
-      1 => 1674888980,
+      1 => 1674889129,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '82279850863d4c744233e28_09265468',
+  'nocache_hash' => '1473200063d53ed7d419c4_18531100',
   'variables' => 
   array (
     'settings' => 0,
@@ -22,14 +22,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d4c744239687_52216264',
+  'unifunc' => 'content_63d53ed7d4ac12_35073998',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d4c744239687_52216264')) {
-function content_63d4c744239687_52216264 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d53ed7d4ac12_35073998')) {
+function content_63d53ed7d4ac12_35073998 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '82279850863d4c744233e28_09265468';
+$_smarty_tpl->properties['nocache_hash'] = '1473200063d53ed7d419c4_18531100';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,13 +49,13 @@ $_smarty_tpl->properties['nocache_hash'] = '82279850863d4c744233e28_09265468';
   <title><?php echo smarty_modifier_myescape((($tmp = @$_smarty_tpl->tpl_vars['settings']->value['site_name'])===null||$tmp==='' ? '' : $tmp));?>
  - <?php echo smarty_modifier_myescape((($tmp = @$_smarty_tpl->tpl_vars['meta_title']->value)===null||$tmp==='' ? '' : $tmp));?>
 </title>
-  <link rel="stylesheet" href="./assets/css/fabric-icons.min.css" />
+  <link rel="stylesheet" href="./assets/css/fabric-icons.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
   <?php echo '<script'; ?>
  type="module" src="./assets/js/web-components.min.js"><?php echo '</script'; ?>
 >
-  <link rel="stylesheet" href="./assets/css/styles.min.css" />
   <?php echo '<script'; ?>
- type="text/javascript" src="./assets/js/script.min.js"><?php echo '</script'; ?>
+ type="text/javascript" src="./assets/js/script.js"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
  type="text/javascript" src="./assets/js/apexcharts.js"><?php echo '</script'; ?>

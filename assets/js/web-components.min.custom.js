@@ -10275,7 +10275,7 @@ const Lu = Au.compose({
   `,
   }),
   Pu = (t, e) => pt`
-  :host([hidden]){display:none}:host{--dialog-height:480px;--dialog-width:640px;display:block}.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.3);touch-action:none}.positioning-region{display:flex;justify-content:center;position:fixed;top:0;bottom:0;left:0;right:0;overflow:auto}.control{box-shadow:${$d};margin-top:auto;margin-bottom:auto;border-radius:calc(${rr} * 1px);width:var(--dialog-width);height:var(--dialog-height);background:${Ja};z-index:1;border:calc(${ar} * 1px) solid transparent}`,
+  :host([hidden]){display:none}:host{--dialog-height:480px;--dialog-width:640px;display:block}.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.0);touch-action:none}.positioning-region{display:flex;justify-content:center;position:fixed;top:0;bottom:0;left:0;right:0;overflow:auto}.control{box-shadow:${$d};margin-top:auto;margin-bottom:auto;border-radius:calc(${rr} * 1px);width:var(--dialog-width);height:var(--dialog-height);background:${Ja};z-index:1;border:calc(${ar} * 1px) solid transparent}`,
   Hu = Vo.compose({
     baseName: 'dialog',
     template: (t, e) =>

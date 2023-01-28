@@ -3,7 +3,7 @@
           {literal}
             function playSuccessAudio() {
               const audio = new Audio('../assets/utils/effect-success.mp3');
-              audio.play();
+              audio.play().catch(function(error) {});
             }
           {/literal}
         </script>
@@ -189,7 +189,7 @@
                   </div>
                   <div>
                     <fluent-tooltip id="tooltip" anchor="anchor-default">
-                      Show the eCurrency Available and Pending
+                      Show the eCurrency is available
                     </fluent-tooltip>
                     <i id="anchor-default" class="ms-Icon ms-Icon--Info fontSize-m mb-2 mr-1"></i>
                   </div>
@@ -201,7 +201,8 @@
                     {if $p.available > 0}
                     <fluent-option value="{$p.id}"
                       {if $frm.ec == $p.id || $wfch}{assign var="wfch" value=0}selected{/if}>
-                      {$p.name|escape:html} {$p.available|fiat:$p.ec} | {$p.pending|fiat:$p.ec}
+                      {$p.name|escape:html} {$p.available|fiat:$p.ec}
+                      {* {$p.name|escape:html} {$p.available|fiat:$p.ec} | {$p.pending|fiat:$p.ec} *}
                     </fluent-option>
                     {/if}
                     {/foreach}

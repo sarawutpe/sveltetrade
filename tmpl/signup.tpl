@@ -76,20 +76,73 @@
           </div>
           <input type="hidden" name="email1" value="{$frm.email1|escape:html}">
           {include file="captcha.tpl" action="signup"}
-          <input type="hidden" name="agree" value="1">
+          <div class="field">
+            <fluent-checkbox onchange="hideDialog(false)" name="agree" value=1 {if $frm.agree}checked{/if}>I have read and agree to <b>Terms & Conditions</b></fluent-checkbox>
+          </div>
           <div class="action">
             <fluent-button type="submit" appearance="accent">Signup</fluent-button>
           </div>
       </form>
+      <!-- Dialog -->
+      <fluent-dialog id="defaultDialog" class="dialog" hidden trap-focus modal>
+        <div class="flex justify-content-between align-items-center px-3">
+          <h2>Terms & Conditions</h2>
+          <div onclick="handleAgree(false)" class="close-button">
+            <i class="ms-Icon ms-Icon--StatusErrorFull"></i>
+          </div>
+        </div>
+        <fluent-divider></fluent-divider>
+        <div class="dialog-content">
+          <div style="margin-bottom: 200px;">
+            <span class="fontSize-l fontWeight-bold mb-2">General</span>
+            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+          </div>
+          <div class="flex justify-content-center px-3 pb-4">
+            <fluent-button class="mr-4" onclick="handleAgree(true)" type="button" autofocus="false" appearance="accent" >Accept</fluent-button>
+            <fluent-button class="mr-4" onclick="handleAgree(false)" type="button" autofocus="false" appearance="outline" >Decline</fluent-button>
+          </div>
+        </div>
+      </fluent-dialog>
     </div>
+
   </fluent-card>
+
   <script>
-    document.getElementsByName('username')[0].addEventListener('input', (e) => {
-      document.getElementsByName('fullname')[0].value = e.target.value
-    })
-    document.getElementsByName('email')[0].addEventListener('input', (e) => {
-      document.getElementsByName('email1')[0].value = e.target.value
-    })
+    const defaultDialog = document.getElementById('defaultDialog')
+    const fullname = document.getElementsByName('fullname')
+    const username = document.getElementsByName('username')
+    const email = document.getElementsByName('email')
+    const email1 = document.getElementsByName('email1')
+
+    function hideDialog(value) {
+      defaultDialog.hidden = Boolean(value)
+    }
+
+    function handleAgree(value) {
+      if (Boolean(value)) {
+        document.getElementsByName('agree')[0].checked = true
+      } else {
+        document.getElementsByName('agree')[0].checked = false
+      }
+      if (defaultDialog) {
+        defaultDialog.hidden = true
+      }
+    }
+
+    if (username && fullname) {
+      username[0].addEventListener('input', (e) => {
+        fullname[0].value = e.target.value
+      })
+    }
+
+    if (email && email1) {
+      email[0].addEventListener('input', (e) => {
+        email1[0].value = e.target.value
+      })
+    }
+
   </script>
 {/if}
 {include file="footer.tpl"}

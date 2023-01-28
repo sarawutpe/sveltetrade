@@ -798,6 +798,10 @@ form .action {
   z-index: 100;
 }
 
+.overlay {
+  background-color: transparent;
+}
+
 .dialog-head {
   display: flex;
   justify-content: space-between;
@@ -822,14 +826,11 @@ form .action {
 }
 
 .dialog-content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  background: #fafafa;
+  padding: 8px;
 }
 
-.dialog-content {
-  padding: 8px;
+.dialog-content ul li {
+  list-style: disc;
 }
 
 .file-container {
@@ -1391,3 +1392,5 @@ form .action {
   background: padding-box linear-gradient(var(--neutral-fill-hover), var(--neutral-fill-hover)),
     border-box var(--neutral-stroke-control-hover);
 }
+
+

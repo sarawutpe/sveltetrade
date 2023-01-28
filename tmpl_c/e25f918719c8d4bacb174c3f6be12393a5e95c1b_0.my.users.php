@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-24 17:20:10
+<?php /* Smarty version 3.1.27, created on 2023-01-28 08:44:55
          compiled from "my:users" */ ?>
 <?php
-/*%%SmartyHeaderCode:171160798863d0053aa94af0_42863257%%*/
+/*%%SmartyHeaderCode:117624886963d4d2775f82e4_91410747%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e25f918719c8d4bacb174c3f6be12393a5e95c1b' => 
     array (
       0 => 'my:users',
-      1 => 1674577210,
+      1 => 1674891895,
       2 => 'my',
     ),
   ),
-  'nocache_hash' => '171160798863d0053aa94af0_42863257',
+  'nocache_hash' => '117624886963d4d2775f82e4_91410747',
   'variables' => 
   array (
     'permits' => 0,
@@ -40,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d0053ab059c8_38024441',
+  'unifunc' => 'content_63d4d2776518f8_53586343',
   'tpl_function' => 
   array (
     'value_color' => 
@@ -50,16 +50,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       ),
       'compiled_filepath' => './tmpl_c\\e25f918719c8d4bacb174c3f6be12393a5e95c1b_0.my.users.php',
       'uid' => 'e25f918719c8d4bacb174c3f6be12393a5e95c1b',
-      'call_name' => 'smarty_template_function_value_color_171160798863d0053aa94af0_42863257',
+      'call_name' => 'smarty_template_function_value_color_117624886963d4d2775f82e4_91410747',
     ),
   ),
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d0053ab059c8_38024441')) {
-function content_63d0053ab059c8_38024441 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d4d2776518f8_53586343')) {
+function content_63d4d2776518f8_53586343 ($_smarty_tpl) {
 if (!is_callable('smarty_function_cycle')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\function.cycle.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '171160798863d0053aa94af0_42863257';
+$_smarty_tpl->properties['nocache_hash'] = '117624886963d4d2775f82e4_91410747';
 ?>
  <?php echo $_smarty_tpl->getSubTemplate ("my:admin_header", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
@@ -178,9 +178,9 @@ if (!$_smarty_tpl->tpl_vars['u']->_loop) {
  <?php }
 }
 ?><?php
-/* smarty_template_function_value_color_171160798863d0053aa94af0_42863257 */
-if (!function_exists('smarty_template_function_value_color_171160798863d0053aa94af0_42863257')) {
-function smarty_template_function_value_color_171160798863d0053aa94af0_42863257($_smarty_tpl,$params) {
+/* smarty_template_function_value_color_117624886963d4d2775f82e4_91410747 */
+if (!function_exists('smarty_template_function_value_color_117624886963d4d2775f82e4_91410747')) {
+function smarty_template_function_value_color_117624886963d4d2775f82e4_91410747($_smarty_tpl,$params) {
 $saved_tpl_vars = $_smarty_tpl->tpl_vars;
 $params = array_merge(array('add_fiat'=>true,'color_neg'=>"red",'color_pos'=>"green",'color_net'=>"gray"), $params);
 foreach ($params as $key => $value) {
@@ -201,6 +201,6 @@ if ($_smarty_tpl->tpl_vars[$key] === $value) $saved_tpl_vars[$key] = $value;
 $_smarty_tpl->tpl_vars = $saved_tpl_vars;
 }
 }
-/*/ smarty_template_function_value_color_171160798863d0053aa94af0_42863257 */
+/*/ smarty_template_function_value_color_117624886963d4d2775f82e4_91410747 */
 
 ?>

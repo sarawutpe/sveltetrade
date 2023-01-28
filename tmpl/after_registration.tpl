@@ -1,5 +1,5 @@
 {include file="header.tpl" meta_title="Redirect"}
-<meta http-equiv="refresh" content="3; url={"?a=login"|encurl}" />
+<meta http-equiv="refresh" content="2; url={"?a=login"|encurl}" />
 <div class="alert success">Registration completed</div>
 
 <div class="flex">

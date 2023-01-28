@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2022-08-14 11:57:10
+<?php /* Smarty version 3.1.27, created on 2023-01-28 08:44:03
          compiled from "my:transactions" */ ?>
 <?php
-/*%%SmartyHeaderCode:113569405062f8c6f62a4da0_94878506%%*/
+/*%%SmartyHeaderCode:145881404563d4d243c96cb9_96041457%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '501c1e9cef5989e647cbae9335eea202d7378567' => 
     array (
       0 => 'my:transactions',
-      1 => 1660471030,
+      1 => 1674891843,
       2 => 'my',
     ),
   ),
-  'nocache_hash' => '113569405062f8c6f62a4da0_94878506',
+  'nocache_hash' => '145881404563d4d243c96cb9_96041457',
   'variables' => 
   array (
     'frm' => 0,
@@ -30,16 +30,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_62f8c6f62e11f1_09167813',
+  'unifunc' => 'content_63d4d243cd4ff7_75660456',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_62f8c6f62e11f1_09167813')) {
-function content_62f8c6f62e11f1_09167813 ($_smarty_tpl) {
-if (!is_callable('smarty_function_html_select_date')) require_once 'C:\\xampp\\htdocs\\inc\\libs\\smarty3\\plugins\\function.html_select_date.php';
-if (!is_callable('smarty_function_cycle')) require_once 'C:\\xampp\\htdocs\\inc\\libs\\smarty3\\plugins\\function.cycle.php';
-if (!is_callable('smarty_modifier_replace')) require_once 'C:\\xampp\\htdocs\\inc\\libs\\smarty3\\plugins\\modifier.replace.php';
+if ($_valid && !is_callable('content_63d4d243cd4ff7_75660456')) {
+function content_63d4d243cd4ff7_75660456 ($_smarty_tpl) {
+if (!is_callable('smarty_function_html_select_date')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\function.html_select_date.php';
+if (!is_callable('smarty_function_cycle')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\function.cycle.php';
+if (!is_callable('smarty_modifier_replace')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.replace.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '113569405062f8c6f62a4da0_94878506';
+$_smarty_tpl->properties['nocache_hash'] = '145881404563d4d243c96cb9_96041457';
 ?>
  <?php echo $_smarty_tpl->getSubTemplate ("my:admin_header", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>

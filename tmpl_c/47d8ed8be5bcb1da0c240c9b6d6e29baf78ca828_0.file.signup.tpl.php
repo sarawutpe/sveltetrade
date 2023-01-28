@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-28 06:58:41
+<?php /* Smarty version 3.1.27, created on 2023-01-28 16:26:52
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\signup.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:131416274963d4b991934775_33320974%%*/
+/*%%SmartyHeaderCode:184330524063d53ebcbf1fe5_47955822%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '47d8ed8be5bcb1da0c240c9b6d6e29baf78ca828' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\signup.tpl',
-      1 => 1674885147,
+      1 => 1674919539,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '131416274963d4b991934775_33320974',
+  'nocache_hash' => '184330524063d53ebcbf1fe5_47955822',
   'variables' => 
   array (
     'deny_registration' => 0,
@@ -25,14 +25,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d4b99198b0a6_56178008',
+  'unifunc' => 'content_63d53ebcc295b7_65417002',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d4b99198b0a6_56178008')) {
-function content_63d4b99198b0a6_56178008 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d53ebcc295b7_65417002')) {
+function content_63d53ebcc295b7_65417002 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '131416274963d4b991934775_33320974';
+$_smarty_tpl->properties['nocache_hash'] = '184330524063d53ebcbf1fe5_47955822';
 echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"Signup"), 0);
 ?>
 
@@ -138,21 +138,74 @@ $_smarty_tpl->tpl_vars['err'] = $foreach_err_Sav;
           <?php echo $_smarty_tpl->getSubTemplate ("captcha.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('action'=>"signup"), 0);
 ?>
 
-          <input type="hidden" name="agree" value="1">
+          <div class="field">
+            <fluent-checkbox onchange="hideDialog(false)" name="agree" value=1 <?php if ($_smarty_tpl->tpl_vars['frm']->value['agree']) {?>checked<?php }?>>I have read and agree to <b>Terms & Conditions</b></fluent-checkbox>
+          </div>
           <div class="action">
             <fluent-button type="submit" appearance="accent">Signup</fluent-button>
           </div>
       </form>
+      <!-- Dialog -->
+      <fluent-dialog id="defaultDialog" class="dialog" hidden trap-focus modal>
+        <div class="flex justify-content-between align-items-center px-3">
+          <h2>Terms & Conditions</h2>
+          <div onclick="handleAgree(false)" class="close-button">
+            <i class="ms-Icon ms-Icon--StatusErrorFull"></i>
+          </div>
+        </div>
+        <fluent-divider></fluent-divider>
+        <div class="dialog-content">
+          <div style="margin-bottom: 200px;">
+            <span class="fontSize-l fontWeight-bold mb-2">General</span>
+            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+          </div>
+          <div class="flex justify-content-center px-3 pb-4">
+            <fluent-button class="mr-4" onclick="handleAgree(true)" type="button" autofocus="false" appearance="accent" >Accept</fluent-button>
+            <fluent-button class="mr-4" onclick="handleAgree(false)" type="button" autofocus="false" appearance="outline" >Decline</fluent-button>
+          </div>
+        </div>
+      </fluent-dialog>
     </div>
+
   </fluent-card>
+
   <?php echo '<script'; ?>
 >
-    document.getElementsByName('username')[0].addEventListener('input', (e) => {
-      document.getElementsByName('fullname')[0].value = e.target.value
-    })
-    document.getElementsByName('email')[0].addEventListener('input', (e) => {
-      document.getElementsByName('email1')[0].value = e.target.value
-    })
+    const defaultDialog = document.getElementById('defaultDialog')
+    const fullname = document.getElementsByName('fullname')
+    const username = document.getElementsByName('username')
+    const email = document.getElementsByName('email')
+    const email1 = document.getElementsByName('email1')
+
+    function hideDialog(value) {
+      defaultDialog.hidden = Boolean(value)
+    }
+
+    function handleAgree(value) {
+      if (Boolean(value)) {
+        document.getElementsByName('agree')[0].checked = true
+      } else {
+        document.getElementsByName('agree')[0].checked = false
+      }
+      if (defaultDialog) {
+        defaultDialog.hidden = true
+      }
+    }
+
+    if (username && fullname) {
+      username[0].addEventListener('input', (e) => {
+        fullname[0].value = e.target.value
+      })
+    }
+
+    if (email && email1) {
+      email[0].addEventListener('input', (e) => {
+        email1[0].value = e.target.value
+      })
+    }
+
   <?php echo '</script'; ?>
 >
 <?php }?>
