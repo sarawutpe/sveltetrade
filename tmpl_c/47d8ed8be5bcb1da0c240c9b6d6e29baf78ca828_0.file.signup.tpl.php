@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-27 23:06:08
+<?php /* Smarty version 3.1.27, created on 2023-01-28 06:58:41
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\signup.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:54001789663d44ad0cd7ad4_70919545%%*/
+/*%%SmartyHeaderCode:131416274963d4b991934775_33320974%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '47d8ed8be5bcb1da0c240c9b6d6e29baf78ca828' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\signup.tpl',
-      1 => 1662888064,
+      1 => 1674885147,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '54001789663d44ad0cd7ad4_70919545',
+  'nocache_hash' => '131416274963d4b991934775_33320974',
   'variables' => 
   array (
     'deny_registration' => 0,
@@ -25,14 +25,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d44ad0d16ad5_18775269',
+  'unifunc' => 'content_63d4b99198b0a6_56178008',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d44ad0d16ad5_18775269')) {
-function content_63d44ad0d16ad5_18775269 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d4b99198b0a6_56178008')) {
+function content_63d4b99198b0a6_56178008 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '54001789663d44ad0cd7ad4_70919545';
+$_smarty_tpl->properties['nocache_hash'] = '131416274963d4b991934775_33320974';
 echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"Signup"), 0);
 ?>
 
@@ -49,14 +49,18 @@ echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smart
   <?php if ($_smarty_tpl->tpl_vars['errors']->value) {?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['turing_image']) {?><div class="alert error">Invalid turing image</div><?php }?>
     
-    <?php if ($_smarty_tpl->tpl_vars['errors']->value['ip_exists_in_database']) {?><div class="alert error">Your IP already exists in our database. Sorry, but registration
+    <?php if ($_smarty_tpl->tpl_vars['errors']->value['ip_exists_in_database']) {?><div class="alert error">Your IP already exists in our database. Sorry, but
+        registration
       impossible</div><?php }?>
-    <?php if ($_smarty_tpl->tpl_vars['errors']->value['invalid_username']) {?><div class="alert error">Please enter valid username! It should contains English letters and
+    <?php if ($_smarty_tpl->tpl_vars['errors']->value['invalid_username']) {?><div class="alert error">Please enter valid username! It should contains English letters
+        and
       digits only.</div><?php }?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['username_too_short']) {?><div class="alert error">Username should contains <?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['errors']->value['username_too_short']);?>
- charaters at
+ charaters
+        at
       least</div><?php }?>
-    <?php if ($_smarty_tpl->tpl_vars['errors']->value['username_exists']) {?><div class="alert error">The Username is already taken. Please try another Username.</div><?php }?>
+    <?php if ($_smarty_tpl->tpl_vars['errors']->value['username_exists']) {?><div class="alert error">The Username is already taken. Please try another Username.</div>
+    <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['no_password']) {?><div class="alert error">Please define a password</div><?php }?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['password_confirm']) {?><div class="alert error">Please confirm your password correctly</div><?php }?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['password_too_small']) {?><div class="alert error">The password you provided is too small, please enter at least
@@ -72,10 +76,12 @@ echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smart
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['no_country']) {?><div class="alert error">Please enter your country</div><?php }?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['no_transaction_code']) {?><div class="alert error">Please define a transaction code</div><?php }?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['transaction_code_confirm']) {?><div class="alert error">Please correcty confirm your transaction code</div><?php }?>
-    <?php if ($_smarty_tpl->tpl_vars['errors']->value['transaction_code_too_small']) {?><div class="alert error">The transaction code you provided is too small, please enter
+    <?php if ($_smarty_tpl->tpl_vars['errors']->value['transaction_code_too_small']) {?><div class="alert error">The transaction code you provided is too small, please
+        enter
       at least <?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['errors']->value['transaction_code_too_small']);?>
  characters!</div><?php }?>
-    <?php if ($_smarty_tpl->tpl_vars['errors']->value['transaction_code_vs_password']) {?><div class="alert error">The Transaction Code should not be equal to the Password you
+    <?php if ($_smarty_tpl->tpl_vars['errors']->value['transaction_code_vs_password']) {?><div class="alert error">The Transaction Code should not be equal to the
+        Password you
       have defined</div><?php }?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['no_agree']) {?><div class="alert error">You have to agree with the Terms and Conditions!</div><?php }?>
     <?php if ($_smarty_tpl->tpl_vars['errors']->value['invalid_account_format']) {?>
@@ -113,6 +119,11 @@ $_smarty_tpl->tpl_vars['err'] = $foreach_err_Sav;
               appearance="outline" required>Username</fluent-text-field>
           </div>
           <div class="field">
+            <fluent-text-field type="text" class="w-100" name="email" value="<?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['frm']->value['email'], ENT_QUOTES, 'UTF-8', true));?>
+"
+              appearance="outline" required>E-mail Address</fluent-text-field>
+          </div>
+          <div class="field">
             <fluent-text-field type="password" class="w-100" name="password" value="<?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['frm']->value['password'], ENT_QUOTES, 'UTF-8', true));?>
 "
               appearance="outline" required>Password</fluent-text-field>
@@ -121,11 +132,6 @@ $_smarty_tpl->tpl_vars['err'] = $foreach_err_Sav;
             <fluent-text-field type="password" class="w-100" name="password2" value="<?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['frm']->value['password2'], ENT_QUOTES, 'UTF-8', true));?>
 "
               appearance="outline" required>Retype Password</fluent-text-field>
-          </div>
-          <div class="field">
-            <fluent-text-field type="text" class="w-100" name="email" value="<?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['frm']->value['email'], ENT_QUOTES, 'UTF-8', true));?>
-"
-              appearance="outline" required>E-mail Address</fluent-text-field>
           </div>
           <input type="hidden" name="email1" value="<?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['frm']->value['email1'], ENT_QUOTES, 'UTF-8', true));?>
 ">
