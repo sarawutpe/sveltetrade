@@ -76,7 +76,7 @@
                       <fluent-radio-group class="card-group" orientation="vertical">
                       {foreach from=$plans item=plan name=fplans}
                             {if $plans|@count > 1}
-                              <fluent-radio class="card-plan" name="h_id" value="{$plan.id}" {if (($smarty.foreach.fplans.first == 1) && (!$frm.h_id)) || ($frm.h_id == $plan.id)} checked {/if}>
+                              <input class="card-plan" name="h_id" value="{$plan.id}" {if (($smarty.foreach.fplans.first == 1) && (!$frm.h_id)) || ($frm.h_id == $plan.id)} checked {/if}>
                                 {foreach from=$plan.plans item=o}
                                 <fluent-card class="card card-plan-item">
                                   <span id="plan-name" class="fontSize-mPlus fontWeight-semibold mb-2">{$o.name|escape:html}</span>
@@ -92,7 +92,7 @@
                                   </div>
                                 </fluent-card>
                               {/foreach}
-                              </fluent-radio>
+                              </input>
                             {else}
                               <fluent-radio name="h_id" value="{$plan.id}" checked>{$plan.name|escape:html}</fluent-radio>
                             {/if}
