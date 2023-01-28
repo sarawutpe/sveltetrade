@@ -14,9 +14,9 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <title>{$settings.site_name|default:""} - {$meta_title|default:""}</title>
-  <link rel="stylesheet" href="./assets/css/fabric-icons.css" />
+  <link rel="stylesheet" href="./assets/css/fabric-icons.min.css" />
   <script type="module" src="./assets/js/web-components.min.js"></script>
-  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/styles.min.css" />
   <script type="text/javascript" src="./assets/js/script.min.js"></script>
   <script type="text/javascript" src="./assets/js/apexcharts.js"></script>
 </head>

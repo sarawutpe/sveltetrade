@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'FabricMDL2Icons';
-  src: url('../fonts/fabric-icons-04e53148.woff') format('woff');
+  src: url('../fonts/fabric-icons.woff') format('woff');
 }
 
 .ms-Icon {
@@ -67,27 +67,3 @@
 .ms-Icon--Delete:before {
   content: '\E74D';
 }
-
-/* 
-E80F
-EAFD
-E825
-E9E6
-E713
-F6B1
-F547
-F3B1
-F4E0
-E73E
-E711
-E946
-E55A
-F167
-EF7D
-EB90 
-*/
-
-/* icon code */
-/*
-
-*/
