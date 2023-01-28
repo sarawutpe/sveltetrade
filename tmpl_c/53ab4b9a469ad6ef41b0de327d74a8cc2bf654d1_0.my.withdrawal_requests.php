@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-15 07:40:28
+<?php /* Smarty version 3.1.27, created on 2023-01-28 17:23:42
          compiled from "my:withdrawal_requests" */ ?>
 <?php
-/*%%SmartyHeaderCode:93768834763c39fdc0ad008_91500380%%*/
+/*%%SmartyHeaderCode:176953321163d54c0e707ad6_87087494%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '53ab4b9a469ad6ef41b0de327d74a8cc2bf654d1' => 
     array (
       0 => 'my:withdrawal_requests',
-      1 => 1673764828,
+      1 => 1674923022,
       2 => 'my',
     ),
   ),
-  'nocache_hash' => '93768834763c39fdc0ad008_91500380',
+  'nocache_hash' => '176953321163d54c0e707ad6_87087494',
   'variables' => 
   array (
     'errors' => 0,
@@ -30,15 +30,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63c39fdc107f72_96454176',
+  'unifunc' => 'content_63d54c0e756812_90926494',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63c39fdc107f72_96454176')) {
-function content_63c39fdc107f72_96454176 ($_smarty_tpl) {
-if (!is_callable('smarty_function_html_select_date')) require_once 'C:\\xampp\\htdocs\\inc\\libs\\smarty3\\plugins\\function.html_select_date.php';
-if (!is_callable('smarty_function_cycle')) require_once 'C:\\xampp\\htdocs\\inc\\libs\\smarty3\\plugins\\function.cycle.php';
+if ($_valid && !is_callable('content_63d54c0e756812_90926494')) {
+function content_63d54c0e756812_90926494 ($_smarty_tpl) {
+if (!is_callable('smarty_function_html_select_date')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\function.html_select_date.php';
+if (!is_callable('smarty_function_cycle')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\function.cycle.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '93768834763c39fdc0ad008_91500380';
+$_smarty_tpl->properties['nocache_hash'] = '176953321163d54c0e707ad6_87087494';
 ?>
  <?php echo $_smarty_tpl->getSubTemplate ("my:admin_header", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>

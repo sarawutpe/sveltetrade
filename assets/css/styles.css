@@ -1174,9 +1174,23 @@ form .action {
 .card {
   margin-right: 16px;
   margin-bottom: 16px;
-  padding: 16px;
   border: 1px solid #ebebeb;
   box-shadow: none;
+  padding: 16px;
+}
+
+.card-plan-item {
+  padding: 10px 16px;
+  min-width: 300px;
+}
+
+.card-plan:hover .card-plan-item {
+  background-color: #ebebeb;
+}
+
+.card-plan:checked .card-plan-item {
+  background-color: #f5f9ff;
+  outline: 2px solid var(--accent-fill-rest);
 }
 
 .line-rounded {
@@ -1392,5 +1406,3 @@ form .action {
   background: padding-box linear-gradient(var(--neutral-fill-hover), var(--neutral-fill-hover)),
     border-box var(--neutral-stroke-control-hover);
 }
-
-
