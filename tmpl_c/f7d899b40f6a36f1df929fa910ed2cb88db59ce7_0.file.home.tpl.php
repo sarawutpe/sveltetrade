@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-28 07:05:37
+<?php /* Smarty version 3.1.27, created on 2023-01-28 07:51:26
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\home.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:54342675763d4bb318777a7_19784490%%*/
+/*%%SmartyHeaderCode:29049805663d4c5eed6a913_34835206%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7d899b40f6a36f1df929fa910ed2cb88db59ce7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\home.tpl',
-      1 => 1674885908,
+      1 => 1674888594,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '54342675763d4bb318777a7_19784490',
+  'nocache_hash' => '29049805663d4c5eed6a913_34835206',
   'variables' => 
   array (
     'settings' => 0,
@@ -24,14 +24,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d4bb318ceb37_61268474',
+  'unifunc' => 'content_63d4c5eed95de6_79827336',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d4bb318ceb37_61268474')) {
-function content_63d4bb318ceb37_61268474 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d4c5eed95de6_79827336')) {
+function content_63d4c5eed95de6_79827336 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '54342675763d4bb318777a7_19784490';
+$_smarty_tpl->properties['nocache_hash'] = '29049805663d4c5eed6a913_34835206';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +50,7 @@ $_smarty_tpl->properties['nocache_hash'] = '54342675763d4bb318777a7_19784490';
   <meta name="theme-color" content="#ffffff">
   <title><?php echo smarty_modifier_myescape((($tmp = @$_smarty_tpl->tpl_vars['settings']->value['site_name'])===null||$tmp==='' ? '' : $tmp));?>
  | Trading Platform</title>
-  <link rel="stylesheet" href="./assets/css/home.css" />
+  <link rel="stylesheet" href="./assets/css/home.min.css" />
 </head>
 
 <body>
