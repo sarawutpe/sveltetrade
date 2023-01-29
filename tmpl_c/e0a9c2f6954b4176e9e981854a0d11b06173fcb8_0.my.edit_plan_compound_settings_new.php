@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-28 18:43:51
+<?php /* Smarty version 3.1.27, created on 2023-01-29 08:41:50
          compiled from "my:edit_plan_compound_settings_new" */ ?>
 <?php
-/*%%SmartyHeaderCode:27510427163d55ed7697457_06551602%%*/
+/*%%SmartyHeaderCode:95370867663d6233e6ab331_26478045%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0a9c2f6954b4176e9e981854a0d11b06173fcb8' => 
     array (
       0 => 'my:edit_plan_compound_settings_new',
-      1 => 1674927831,
+      1 => 1674978110,
       2 => 'my',
     ),
   ),
-  'nocache_hash' => '27510427163d55ed7697457_06551602',
+  'nocache_hash' => '95370867663d6233e6ab331_26478045',
   'variables' => 
   array (
     'type' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d55ed769de34_05602303',
+  'unifunc' => 'content_63d6233e6b0b25_11022083',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d55ed769de34_05602303')) {
-function content_63d55ed769de34_05602303 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d6233e6b0b25_11022083')) {
+function content_63d6233e6b0b25_11022083 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '27510427163d55ed7697457_06551602';
+$_smarty_tpl->properties['nocache_hash'] = '95370867663d6233e6ab331_26478045';
 ?>
  <tr id=tr_compouding0> <th class=title colspan=2>Compounding Settings</th> </tr> <tr id=tr_compouding1> <th><a data-hlp="Compounding is the ability of an asset to generate earnings, which are then reinvested or remain invested with the goal of generating their own earnings. In other words, compounding refers to generating earnings from previous earnings." class=hlp>Compounding:</a></th> <td> <select name=use_compound class=inpts onchange="CheckCompound();"> <option value=0 <?php if ($_smarty_tpl->tpl_vars['type']->value['use_compound'] == 0) {?>selected<?php }?>>Disable</option> <option value=1 <?php if ($_smarty_tpl->tpl_vars['type']->value['use_compound'] == 1) {?>selected<?php }?>>Enable</option> </select> </td> </tr> <tr id=tr_compouding2> <th><a data-hlp="Allow compounding for deposits in this limits only. If deposit amount is too high coumpound will grouw dpeosit too fast." class=hlp>Compounding Deposit Amount Limits:</a></th> <td><nobr>min: <?php echo amount_smarty_fiat_func(array(),$_smarty_tpl);?>
 <input type=input name=compound_min_deposit value="<?php echo amount_smarty_format($_smarty_tpl->tpl_vars['type']->value['compound_min_deposit']);?>

@@ -22,9 +22,11 @@
 </head>
 
 <body>
+  {* FIX ME *}
   <div id="loader">
     <fluent-progress-ring></fluent-progress-ring>
   </div>
+  {* FIX ME *}
   <div id="portal" class={if $userinfo.logged === 0}{"sticky"}{/if}>
     <div class="portal-menu">
       <div class="container">

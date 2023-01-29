@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-28 20:26:51
+<?php /* Smarty version 3.1.27, created on 2023-01-29 09:32:11
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\deposit.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:108826923163d576fb4c4525_89583507%%*/
+/*%%SmartyHeaderCode:73899970563d62f0b1f69d3_30196789%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd58dfafb3c5f9353a2cccc9d5a06b9fd53227c49' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\deposit.tpl',
-      1 => 1674933903,
+      1 => 1674981013,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '108826923163d576fb4c4525_89583507',
+  'nocache_hash' => '73899970563d62f0b1f69d3_30196789',
   'variables' => 
   array (
     'fatal' => 0,
@@ -23,6 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'qplans' => 0,
     'plans' => 0,
     'plan' => 0,
+    'plan_item_calc' => 0,
     'o' => 0,
     'dps' => 0,
     'p' => 0,
@@ -30,14 +31,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d576fb5059a5_32452618',
+  'unifunc' => 'content_63d62f0b23d626_00279523',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d576fb5059a5_32452618')) {
-function content_63d576fb5059a5_32452618 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d62f0b23d626_00279523')) {
+function content_63d62f0b23d626_00279523 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '108826923163d576fb4c4525_89583507';
+$_smarty_tpl->properties['nocache_hash'] = '73899970563d62f0b1f69d3_30196789';
 ?>
           <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"Deposit"), 0);
 ?>
@@ -138,7 +139,30 @@ $_smarty_tpl->tpl_vars['__foreach_fplans']->value['first'] = $_smarty_tpl->tpl_v
 $foreach_plan_Sav = $_smarty_tpl->tpl_vars['plan'];
 ?>
                             <?php if (count($_smarty_tpl->tpl_vars['plans']->value) > 1) {?>
-                              <input id="<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['id']);?>
+                              <div class="card-plan-content">
+
+                              <?php $_smarty_tpl->tpl_vars['plan_item_calc'] = new Smarty_Variable(array(), null, 0);?>
+                              <?php if (count($_smarty_tpl->tpl_vars['plan']->value['plans']) > 0) {?>
+                              <?php ob_start();
+echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['q_days']);
+$_tmp1=ob_get_clean();
+ob_start();
+echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['plans'][0]['percent']);
+$_tmp2=ob_get_clean();
+ob_start();
+echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['plans'][0]['min_deposit']);
+$_tmp3=ob_get_clean();
+ob_start();
+echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['plans'][0]['max_deposit']);
+$_tmp4=ob_get_clean();
+ob_start();
+echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['period']);
+$_tmp5=ob_get_clean();
+$_smarty_tpl->tpl_vars['plan_item_calc'] = new Smarty_Variable(array($_tmp1,$_tmp2,$_tmp3,$_tmp4,$_tmp5), null, 0);?>
+                              <?php }?>  
+
+                              <input aria-valuetext=<?php echo smarty_modifier_myescape(json_encode($_smarty_tpl->tpl_vars['plan_item_calc']->value));?>
+ id="<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['id']);?>
 " type="radio" class="card-plan" name="h_id" value="<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['id']);?>
 " <?php if ((((isset($_smarty_tpl->tpl_vars['__foreach_fplans']->value['first']) ? $_smarty_tpl->tpl_vars['__foreach_fplans']->value['first'] : null) == 1) && (!$_smarty_tpl->tpl_vars['frm']->value['h_id'])) || ($_smarty_tpl->tpl_vars['frm']->value['h_id'] == $_smarty_tpl->tpl_vars['plan']->value['id'])) {?> checked <?php }?>>
                                 <?php
@@ -152,32 +176,33 @@ foreach ($_from as $_smarty_tpl->tpl_vars['o']->value) {
 $_smarty_tpl->tpl_vars['o']->_loop = true;
 $foreach_o_Sav = $_smarty_tpl->tpl_vars['o'];
 ?>
-                                  <label for="<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['id']);?>
+                                  <label class="label" for="<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['id']);?>
 ">
-                                    <fluent-card class="card card-plan-item">
-                                      <span id="plan-name" class="fontSize-mPlus fontWeight-semibold mb-2"><?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['o']->value['name'], ENT_QUOTES, 'UTF-8', true));?>
+                                  <fluent-card class="card card-plan-item">
+                                    <span id="plan-name" class="fontSize-mPlus fontWeight-semibold mb-2"><?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['o']->value['name'], ENT_QUOTES, 'UTF-8', true));?>
 </span>
-                                      <div class="flex align-items-center">
+                                    <div class="flex align-items-center">
+                                    <i class="ms-Icon ms-Icon--CheckMark fontSize-m mb-2 mr-1"></i>
+                                    <span id="plan-min" class="fontSize-sPlus mb-2"><?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['plan']->value['name'], ENT_QUOTES, 'UTF-8', true));?>
+</span>
+                                    </div>
+                                    <div class="flex align-items-center">
                                       <i class="ms-Icon ms-Icon--CheckMark fontSize-m mb-2 mr-1"></i>
-                                      <span id="plan-min" class="fontSize-sPlus mb-2"><?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['plan']->value['name'], ENT_QUOTES, 'UTF-8', true));?>
-</span>
-                                      </div>
-                                      <div class="flex align-items-center">
-                                        <i class="ms-Icon ms-Icon--CheckMark fontSize-m mb-2 mr-1"></i>
-                                        <span id="plan-min" class="fontSize-sPlus mb-2">
-                                        Min <?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['o']->value['min_deposit']);?>
+                                      <span id="plan-min" class="fontSize-sPlus mb-2">
+                                      Min <?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['o']->value['min_deposit']);?>
  Max <?php if ($_smarty_tpl->tpl_vars['o']->value['max_deposit'] == 0) {?>&infin;<?php } else {
 echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['o']->value['max_deposit']);
 }?>
-                                        </span>
-                                      </div>
-                                    </fluent-card>
-                                </label>
+                                      </span>
+                                    </div>
+                                  </fluent-card>
+                                  </label>
                               <?php
 $_smarty_tpl->tpl_vars['o'] = $foreach_o_Sav;
 }
 ?>
                               </input>
+                              </div>
                             <?php } else { ?>
                               <fluent-radio name="h_id" value="<?php echo smarty_modifier_myescape($_smarty_tpl->tpl_vars['plan']->value['id']);?>
 " checked><?php echo smarty_modifier_myescape(htmlspecialchars($_smarty_tpl->tpl_vars['plan']->value['name'], ENT_QUOTES, 'UTF-8', true));?>
@@ -188,6 +213,7 @@ $_smarty_tpl->tpl_vars['plan'] = $foreach_plan_Sav;
 }
 ?>
                           </div>
+                          
                           <?php
 $_from = $_smarty_tpl->tpl_vars['plans']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -238,8 +264,13 @@ $_smarty_tpl->tpl_vars['p'] = $foreach_p_Sav;
                       </fluent-select>
                     </div>
                     
-                    <span class="fontSize-mPlus fontWeight-regular mb-2">Amount to Spend <?php echo amount_smarty_fiat_func(array(),$_smarty_tpl);?>
+                    
+                    <div class="flex justify-content-between">
+                      <span class="fontSize-mPlus fontWeight-regular mb-2">Amount to Spend <?php echo amount_smarty_fiat_func(array(),$_smarty_tpl);?>
 </span>
+                      <fluent-badge id="select-min-amount" class="cursor-pointer" appearance="accent">SELECT MIN SPEND</fluent-badge>
+                    </div>
+                    
                     <div class="field">
                       <fluent-number-field id="input-amount" class="w-100 fontSize-mPlus fontWeight-regular mb-2"
                         name="amount" value="<?php echo smarty_modifier_myescape(amount_smarty_format((($tmp = @$_smarty_tpl->tpl_vars['frm']->value['amount'])===null||$tmp==='' ? $_smarty_tpl->tpl_vars['min_deposit']->value : $tmp)));?>
@@ -258,19 +289,19 @@ $_smarty_tpl->tpl_vars['p'] = $foreach_p_Sav;
                   <div>
                     <div class="flex justify-content-between align-items-center">
                       <span class="fontSize-l fontWeight-regular">Daily</span>
-                      <span id="calc-daily" class="fontSize-xlPlus">$0.00</span>
+                      <span id="print-daily" class="fontSize-xlPlus">$0.00</span>
                     </div>
                     <div class="flex justify-content-between align-items-center">
-                      <span class="fontSize-l fontWeight-regular">Weekly</span>
-                      <span id="calc-weekly" class="fontSize-xlPlus">$0.00</span>
-                    </div>
+                    <span class="fontSize-l fontWeight-regular">Monthly</span>
+                    <span id="print-monthly" class="fontSize-xlPlus">$0.00</span>
+                  </div>
                     <div class="flex justify-content-between align-items-center">
-                      <span class="fontSize-l fontWeight-regular">Monthly</span>
-                      <span id="calc-monthly" class="fontSize-xlPlus">$0.00</span>
+                      <span class="fontSize-l fontWeight-regular">Half Yearly</span>
+                      <span id="print-half-Yearly" class="fontSize-xlPlus">$0.00</span>
                     </div>
                     <div class="flex justify-content-between align-items-center">
                       <span class="fontSize-l fontWeight-regular">Yearly</span>
-                      <span id="calc-yearly" class="fontSize-xlPlus">$0.00</span>
+                      <span id="print-yearly" class="fontSize-xlPlus">$0.00</span>
                     </div>
                   </div>
                 </div>

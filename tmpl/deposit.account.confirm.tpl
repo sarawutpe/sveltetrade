@@ -93,7 +93,7 @@
       <input type="hidden" name="compound" value={$compound}>
       <div class="action">
         <fluent-button class="mr-2" type="submit" appearance="accent">Process</fluent-button>
-        <fluent-button class="mr-2" type="button" appearance="outline" onclick="{"?a=deposit"|encurl}">Cancel</fluent-button>
+        <fluent-button class="mr-2" type="button" appearance="outline" onclick="document.location='?a=deposit'">Cancel</fluent-button>
       </div>
     </form>
 

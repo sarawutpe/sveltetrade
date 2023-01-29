@@ -571,6 +571,10 @@ b {
   width: 200px;
 }
 
+.label {
+  cursor: pointer;
+}
+
 .select.small {
   width: 100px;
 }
@@ -1179,18 +1183,31 @@ form .action {
   padding: 16px;
 }
 
+.card-plan-content {
+  position: relative;
+}
+
 .card-plan-item {
   padding: 10px 16px;
   min-width: 300px;
 }
 
-.card-plan:hover .card-plan-item {
+input.card-plan {
+  position: absolute;
+  opacity: 0;
+}
+
+input.card-plan:hover + label .card-plan-item {
   background-color: #ebebeb;
 }
 
-.card-plan:checked .card-plan-item {
-  background-color: #f5f9ff;
+input.card-plan:checked + label .card-plan-item {
   outline: 2px solid var(--accent-fill-rest);
+  background-color: #f5f9ff;
+}
+
+input.card-plan:checked + label .card-plan-item #plan-name {
+  color: var(--accent-fill-rest);
 }
 
 .line-rounded {

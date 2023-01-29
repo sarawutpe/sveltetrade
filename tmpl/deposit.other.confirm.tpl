@@ -86,7 +86,7 @@
 {/if}
 
 <br><input type=submit value="Save" class=sbmt> &nbsp;
-<input type=button class=sbmt value="Cancel" onclick="{"?a=deposit"|encurl}">
+<input type=button class=sbmt value="Cancel" onclick="document.location='?a=deposit'">
 </form>
 
 {else}

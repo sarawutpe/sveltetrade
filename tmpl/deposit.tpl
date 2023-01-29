@@ -76,28 +76,39 @@
                       <div>
                       {foreach from=$plans item=plan name=fplans}
                             {if $plans|@count > 1}
-                              <input class="card-plan" name="h_id" value="{$plan.id}" {if (($smarty.foreach.fplans.first == 1) && (!$frm.h_id)) || ($frm.h_id == $plan.id)} checked {/if}>
+                              <div class="card-plan-content">
+
+                              {$plan_item_calc = []}
+                              {if $plan.plans|@count > 0}
+                              {$plan_item_calc = [{$plan.q_days},{$plan.plans[0].percent},{$plan.plans[0].min_deposit},{$plan.plans[0].max_deposit}, {$plan.period}]}
+                              {/if}  
+
+                              <input aria-valuetext={$plan_item_calc|json_encode} id="{$plan.id}" type="radio" class="card-plan" name="h_id" value="{$plan.id}" {if (($smarty.foreach.fplans.first == 1) && (!$frm.h_id)) || ($frm.h_id == $plan.id)} checked {/if}>
                                 {foreach from=$plan.plans item=o}
-                                <fluent-card class="card card-plan-item">
-                                  <span id="plan-name" class="fontSize-mPlus fontWeight-semibold mb-2">{$o.name|escape:html}</span>
-                                  <div class="flex align-items-center">
-                                  <i class="ms-Icon ms-Icon--CheckMark fontSize-m mb-2 mr-1"></i>
-                                  <span id="plan-min" class="fontSize-sPlus mb-2">{$plan.name|escape:html}</span>
-                                  </div>
-                                  <div class="flex align-items-center">
+                                  <label class="label" for="{$plan.id}">
+                                  <fluent-card class="card card-plan-item">
+                                    <span id="plan-name" class="fontSize-mPlus fontWeight-semibold mb-2">{$o.name|escape:html}</span>
+                                    <div class="flex align-items-center">
                                     <i class="ms-Icon ms-Icon--CheckMark fontSize-m mb-2 mr-1"></i>
-                                    <span id="plan-min" class="fontSize-sPlus mb-2">
-                                    Min {$o.min_deposit} Max {if $o.max_deposit == 0}&infin;{else}{$o.max_deposit}{/if}
-                                    </span>
-                                  </div>
-                                </fluent-card>
+                                    <span id="plan-min" class="fontSize-sPlus mb-2">{$plan.name|escape:html}</span>
+                                    </div>
+                                    <div class="flex align-items-center">
+                                      <i class="ms-Icon ms-Icon--CheckMark fontSize-m mb-2 mr-1"></i>
+                                      <span id="plan-min" class="fontSize-sPlus mb-2">
+                                      Min {$o.min_deposit} Max {if $o.max_deposit == 0}&infin;{else}{$o.max_deposit}{/if}
+                                      </span>
+                                    </div>
+                                  </fluent-card>
+                                  </label>
                               {/foreach}
                               </input>
+                              </div>
                             {else}
                               <fluent-radio name="h_id" value="{$plan.id}" checked>{$plan.name|escape:html}</fluent-radio>
                             {/if}
                           {/foreach}
-                          </fluent-radio-group>
+                          </div>
+                          {* group *}
                           {foreach from=$plans item=plan name=fplans}
                       {/foreach}
                     </div>
@@ -114,7 +125,12 @@
                       </fluent-select>
                     </div>
                     {* Amount *}
-                    <span class="fontSize-mPlus fontWeight-regular mb-2">Amount to Spend {fiat}</span>
+                    
+                    <div class="flex justify-content-between">
+                      <span class="fontSize-mPlus fontWeight-regular mb-2">Amount to Spend {fiat}</span>
+                      <fluent-badge id="select-min-amount" class="cursor-pointer" appearance="accent">SELECT MIN SPEND</fluent-badge>
+                    </div>
+                    
                     <div class="field">
                       <fluent-number-field id="input-amount" class="w-100 fontSize-mPlus fontWeight-regular mb-2"
                         name="amount" value="{$frm.amount|default:$min_deposit|amount_format}" required>
@@ -132,19 +148,19 @@
                   <div>
                     <div class="flex justify-content-between align-items-center">
                       <span class="fontSize-l fontWeight-regular">Daily</span>
-                      <span id="calc-daily" class="fontSize-xlPlus">$0.00</span>
+                      <span id="print-daily" class="fontSize-xlPlus">$0.00</span>
                     </div>
                     <div class="flex justify-content-between align-items-center">
-                      <span class="fontSize-l fontWeight-regular">Weekly</span>
-                      <span id="calc-weekly" class="fontSize-xlPlus">$0.00</span>
-                    </div>
+                    <span class="fontSize-l fontWeight-regular">Monthly</span>
+                    <span id="print-monthly" class="fontSize-xlPlus">$0.00</span>
+                  </div>
                     <div class="flex justify-content-between align-items-center">
-                      <span class="fontSize-l fontWeight-regular">Monthly</span>
-                      <span id="calc-monthly" class="fontSize-xlPlus">$0.00</span>
+                      <span class="fontSize-l fontWeight-regular">Half Yearly</span>
+                      <span id="print-half-Yearly" class="fontSize-xlPlus">$0.00</span>
                     </div>
                     <div class="flex justify-content-between align-items-center">
                       <span class="fontSize-l fontWeight-regular">Yearly</span>
-                      <span id="calc-yearly" class="fontSize-xlPlus">$0.00</span>
+                      <span id="print-yearly" class="fontSize-xlPlus">$0.00</span>
                     </div>
                   </div>
                 </div>
