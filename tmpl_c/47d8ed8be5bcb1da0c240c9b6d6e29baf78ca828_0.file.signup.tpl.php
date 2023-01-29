@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-28 16:26:52
+<?php /* Smarty version 3.1.27, created on 2023-01-29 16:52:26
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\signup.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:184330524063d53ebcbf1fe5_47955822%%*/
+/*%%SmartyHeaderCode:48281067663d6963ad24719_97607731%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '47d8ed8be5bcb1da0c240c9b6d6e29baf78ca828' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\signup.tpl',
-      1 => 1674919539,
+      1 => 1674990436,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '184330524063d53ebcbf1fe5_47955822',
+  'nocache_hash' => '48281067663d6963ad24719_97607731',
   'variables' => 
   array (
     'deny_registration' => 0,
@@ -25,14 +25,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d53ebcc295b7_65417002',
+  'unifunc' => 'content_63d6963af3c975_02866240',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d53ebcc295b7_65417002')) {
-function content_63d53ebcc295b7_65417002 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d6963af3c975_02866240')) {
+function content_63d6963af3c975_02866240 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '184330524063d53ebcbf1fe5_47955822';
+$_smarty_tpl->properties['nocache_hash'] = '48281067663d6963ad24719_97607731';
 echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"Signup"), 0);
 ?>
 
@@ -155,11 +155,13 @@ $_smarty_tpl->tpl_vars['err'] = $foreach_err_Sav;
         </div>
         <fluent-divider></fluent-divider>
         <div class="dialog-content">
-          <div style="margin-bottom: 200px;">
+
+          <div style="margin-bottom: 160px;">
+
             <span class="fontSize-l fontWeight-bold mb-2">General</span>
-            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
-            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
-            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+            <span class="fontSize-l mb-2">Opening accounts are for adults of legal age only.</span>
+            <span class="fontSize-l mb-2">A person is allowed to open 1 account only.</span>
+            <span class="fontSize-l mb-2">In case of mischievous and/or harmful actions against the service. Your account will be permanently terminated.</span>
           </div>
           <div class="flex justify-content-center px-3 pb-4">
             <fluent-button class="mr-4" onclick="handleAgree(true)" type="button" autofocus="false" appearance="accent" >Accept</fluent-button>

@@ -93,11 +93,13 @@
         </div>
         <fluent-divider></fluent-divider>
         <div class="dialog-content">
-          <div style="margin-bottom: 200px;">
+
+          <div style="margin-bottom: 160px;">
+
             <span class="fontSize-l fontWeight-bold mb-2">General</span>
-            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
-            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
-            <span class="fontSize-l">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+            <span class="fontSize-l mb-2">Opening accounts are for adults of legal age only.</span>
+            <span class="fontSize-l mb-2">A person is allowed to open 1 account only.</span>
+            <span class="fontSize-l mb-2">In case of mischievous and/or harmful actions against the service. Your account will be permanently terminated.</span>
           </div>
           <div class="flex justify-content-center px-3 pb-4">
             <fluent-button class="mr-4" onclick="handleAgree(true)" type="button" autofocus="false" appearance="accent" >Accept</fluent-button>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-29 09:33:07
+<?php /* Smarty version 3.1.27, created on 2023-01-29 09:35:36
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\deposit.account.confirm.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:189589051563d62f43cb93f1_73233870%%*/
+/*%%SmartyHeaderCode:128464362063d62fd8f12d71_38411417%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf16e592fe9da093ffa7e3b0a997162c037e95dc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\deposit.account.confirm.tpl',
-      1 => 1662895960,
+      1 => 1674981252,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '189589051563d62f43cb93f1_73233870',
+  'nocache_hash' => '128464362063d62fd8f12d71_38411417',
   'variables' => 
   array (
     'errors' => 0,
@@ -28,14 +28,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d62f43cf4675_19648309',
+  'unifunc' => 'content_63d62fd900e3d8_19186648',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d62f43cf4675_19648309')) {
-function content_63d62f43cf4675_19648309 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d62fd900e3d8_19186648')) {
+function content_63d62fd900e3d8_19186648 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '189589051563d62f43cb93f1_73233870';
+$_smarty_tpl->properties['nocache_hash'] = '128464362063d62fd8f12d71_38411417';
 echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"Deposit Confirmation"), 0);
 ?>
 
@@ -180,8 +180,7 @@ $_smarty_tpl->tpl_vars['t'] = $foreach_t_Sav;
 >
       <div class="action">
         <fluent-button class="mr-2" type="submit" appearance="accent">Process</fluent-button>
-        <fluent-button class="mr-2" type="button" appearance="outline" onclick="<?php echo smarty_modifier_myescape(encurl("?a=deposit"));?>
-">Cancel</fluent-button>
+        <fluent-button class="mr-2" type="button" appearance="outline" onclick="document.location='?a=deposit'">Cancel</fluent-button>
       </div>
     </form>
 
