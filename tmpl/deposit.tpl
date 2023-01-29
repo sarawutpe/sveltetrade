@@ -73,7 +73,7 @@
                     <input type="hidden" name="a" value="deposit">
                     {if $qplans > 1}<span class="fontSize-mPlus fontWeight-regular mb-2">Select a plan</span>{/if}
                     <div class="field">
-                      <fluent-radio-group class="card-group" orientation="vertical">
+                      <div>
                       {foreach from=$plans item=plan name=fplans}
                             {if $plans|@count > 1}
                               <input class="card-plan" name="h_id" value="{$plan.id}" {if (($smarty.foreach.fplans.first == 1) && (!$frm.h_id)) || ($frm.h_id == $plan.id)} checked {/if}>
