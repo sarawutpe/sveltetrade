@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-29 17:12:15
+<?php /* Smarty version 3.1.27, created on 2023-01-29 17:53:38
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\nav.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:39005639563d69adf1fae95_50064197%%*/
+/*%%SmartyHeaderCode:60494992463d6a4920e4677_72271076%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -13,21 +13,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '39005639563d69adf1fae95_50064197',
+  'nocache_hash' => '60494992463d6a4920e4677_72271076',
   'variables' => 
   array (
     'userinfo' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d69adf20a555_71706687',
+  'unifunc' => 'content_63d6a4920eed18_85185620',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d69adf20a555_71706687')) {
-function content_63d69adf20a555_71706687 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d6a4920eed18_85185620')) {
+function content_63d6a4920eed18_85185620 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '39005639563d69adf1fae95_50064197';
+$_smarty_tpl->properties['nocache_hash'] = '60494992463d6a4920e4677_72271076';
 ?>
             <?php if ($_smarty_tpl->tpl_vars['userinfo']->value['logged'] == 1) {?>
               <div class="menu-group">

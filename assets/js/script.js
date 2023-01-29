@@ -176,7 +176,8 @@ document.onreadystatechange = () => {
       }
     }
 
-    if (urlSearchParams === '?a=deposit') {
+    if (urlSearchParams.startsWith('?a=deposit')) {
+      console.log('ok');
       // calc profit
       const amountElement = document.getElementById('input-amount');
       const cardPlanElements = document.querySelectorAll('.card-plan');

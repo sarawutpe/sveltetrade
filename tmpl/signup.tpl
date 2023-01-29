@@ -93,9 +93,7 @@
         </div>
         <fluent-divider></fluent-divider>
         <div class="dialog-content">
-
           <div style="margin-bottom: 160px;">
-
             <span class="fontSize-l fontWeight-bold mb-2">General</span>
             <span class="fontSize-l mb-2">Opening accounts are for adults of legal age only.</span>
             <span class="fontSize-l mb-2">A person is allowed to open 1 account only.</span>

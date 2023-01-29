@@ -43,12 +43,10 @@
           </div>
           <div class="text-logo">
             <span class="fontWeight-semibold">Grow your assets</span>
-
             <div class="group-underline">
               <span class="fontWeight-semibold">10X faster</span>
               <img class="underline" src="./assets/img/underline.svg" width="auto" height="120px" draggable="false" />
             </div>
-
             <span class="fontWeight-regular sub-text-logo">Join and gain up to <b
                 class="text-base fontWeight-bold">0.4%</b> daily.</span>
           </div>
