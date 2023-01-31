@@ -123,7 +123,7 @@ a {
 }
 
 b {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .fontSize-su {
@@ -714,6 +714,14 @@ form .action {
   flex-wrap: wrap;
 }
 
+.gap-1 {
+  gap: 4px;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
 @media screen and (max-width: 599.95px) {
   .flex-xs-column {
     flex-direction: column;
@@ -1004,7 +1012,7 @@ form .action {
 #portal .container {
   max-width: 900px;
   margin: auto;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 1rem;
 }
 
 .portal-menu {

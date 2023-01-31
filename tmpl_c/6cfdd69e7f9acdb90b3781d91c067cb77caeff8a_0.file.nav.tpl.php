@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-29 17:53:38
+<?php /* Smarty version 3.1.27, created on 2023-01-31 18:33:25
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\nav.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:60494992463d6a4920e4677_72271076%%*/
+/*%%SmartyHeaderCode:69289017063d950e519d866_29677402%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,25 +9,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6cfdd69e7f9acdb90b3781d91c067cb77caeff8a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\nav.tpl',
-      1 => 1673540740,
+      1 => 1675180054,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '60494992463d6a4920e4677_72271076',
+  'nocache_hash' => '69289017063d950e519d866_29677402',
   'variables' => 
   array (
     'userinfo' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d6a4920eed18_85185620',
+  'unifunc' => 'content_63d950e51aa346_81504019',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d6a4920eed18_85185620')) {
-function content_63d6a4920eed18_85185620 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d950e51aa346_81504019')) {
+function content_63d950e51aa346_81504019 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '60494992463d6a4920e4677_72271076';
+$_smarty_tpl->properties['nocache_hash'] = '69289017063d950e519d866_29677402';
 ?>
             <?php if ($_smarty_tpl->tpl_vars['userinfo']->value['logged'] == 1) {?>
               <div class="menu-group">
@@ -50,6 +50,11 @@ $_smarty_tpl->properties['nocache_hash'] = '60494992463d6a4920e4677_72271076';
 " class="menu-item <?php if ($_GET['a'] == "history") {?>active<?php }?>">
                   <i class="ms-Icon ms-Icon--LineChart fontSize-xl"></i>
                   <span>History</span>
+                </a>
+                <a href="<?php echo smarty_modifier_myescape(encurl("?a=deposit_list"));?>
+" class="menu-item <?php if ($_GET['a'] == "deposit_list") {?>active<?php }?>">
+                  <i class="ms-Icon ms-Icon--LineChart fontSize-xl"></i>
+                  <span>Deposit History</span>
                 </a>
                 <a href="<?php echo smarty_modifier_myescape(encurl("?a=referals"));?>
 " class="menu-item <?php if ($_GET['a'] == "referals") {?>active<?php }?>">

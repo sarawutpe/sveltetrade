@@ -3,8 +3,9 @@
 php7.4 ioncube
 
 deposit_list
-list edit
 
-deposit history
+todos
+file -> deposit_list.tpl
+name -> deposit history
 
 withdraw history

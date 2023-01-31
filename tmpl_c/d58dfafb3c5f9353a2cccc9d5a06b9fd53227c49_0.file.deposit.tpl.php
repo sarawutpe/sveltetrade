@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-29 17:53:10
+<?php /* Smarty version 3.1.27, created on 2023-01-31 18:23:37
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\deposit.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:106480171563d6a476432b23_98986913%%*/
+/*%%SmartyHeaderCode:212064028463d94e99396924_15583047%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '106480171563d6a476432b23_98986913',
+  'nocache_hash' => '212064028463d94e99396924_15583047',
   'variables' => 
   array (
     'fatal' => 0,
@@ -31,14 +31,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d6a47647bde9_90002249',
+  'unifunc' => 'content_63d94e993efce5_78263264',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d6a47647bde9_90002249')) {
-function content_63d6a47647bde9_90002249 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d94e993efce5_78263264')) {
+function content_63d94e993efce5_78263264 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '106480171563d6a476432b23_98986913';
+$_smarty_tpl->properties['nocache_hash'] = '212064028463d94e99396924_15583047';
 ?>
           <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('meta_title'=>"Deposit"), 0);
 ?>

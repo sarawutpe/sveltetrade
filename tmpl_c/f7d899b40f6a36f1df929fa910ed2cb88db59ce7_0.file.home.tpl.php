@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-29 17:12:13
+<?php /* Smarty version 3.1.27, created on 2023-01-31 16:37:43
          compiled from "C:\xampp\htdocs\sveltetrade\tmpl\home.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:85390608863d69add225a95_72863679%%*/
+/*%%SmartyHeaderCode:137980557363d935c7a6f6f0_22861462%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7d899b40f6a36f1df929fa910ed2cb88db59ce7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\sveltetrade\\tmpl\\home.tpl',
-      1 => 1675008446,
+      1 => 1675008906,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '85390608863d69add225a95_72863679',
+  'nocache_hash' => '137980557363d935c7a6f6f0_22861462',
   'variables' => 
   array (
     'settings' => 0,
@@ -24,14 +24,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d69add253262_59889569',
+  'unifunc' => 'content_63d935c7dc89f3_79564539',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d69add253262_59889569')) {
-function content_63d69add253262_59889569 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d935c7dc89f3_79564539')) {
+function content_63d935c7dc89f3_79564539 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_myescape')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\modifier.myescape.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '85390608863d69add225a95_72863679';
+$_smarty_tpl->properties['nocache_hash'] = '137980557363d935c7a6f6f0_22861462';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,12 +83,10 @@ $_smarty_tpl->properties['nocache_hash'] = '85390608863d69add225a95_72863679';
           </div>
           <div class="text-logo">
             <span class="fontWeight-semibold">Grow your assets</span>
-
             <div class="group-underline">
               <span class="fontWeight-semibold">10X faster</span>
               <img class="underline" src="./assets/img/underline.svg" width="auto" height="120px" draggable="false" />
             </div>
-
             <span class="fontWeight-regular sub-text-logo">Join and gain up to <b
                 class="text-base fontWeight-bold">0.4%</b> daily.</span>
           </div>
