@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-29 06:23:52
+<?php /* Smarty version 3.1.27, created on 2023-02-01 06:57:18
          compiled from "my:news" */ ?>
 <?php
-/*%%SmartyHeaderCode:36811872963d602e8f069b3_20102412%%*/
+/*%%SmartyHeaderCode:116312874563d9ff3ea782f0_20654339%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '973d291f6f5d7d374482e8daf7a3ac0088b3fdae' => 
     array (
       0 => 'my:news',
-      1 => 1674969832,
+      1 => 1675231038,
       2 => 'my',
     ),
   ),
-  'nocache_hash' => '36811872963d602e8f069b3_20102412',
+  'nocache_hash' => '116312874563d9ff3ea782f0_20654339',
   'variables' => 
   array (
     'permits' => 0,
@@ -24,14 +24,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d602e8f38a46_98982121',
+  'unifunc' => 'content_63d9ff3eaa8a26_91380262',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d602e8f38a46_98982121')) {
-function content_63d602e8f38a46_98982121 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d9ff3eaa8a26_91380262')) {
+function content_63d9ff3eaa8a26_91380262 ($_smarty_tpl) {
 if (!is_callable('smarty_function_cycle')) require_once 'C:\\xampp\\htdocs\\sveltetrade\\inc\\libs\\smarty3\\plugins\\function.cycle.php';
 
-$_smarty_tpl->properties['nocache_hash'] = '36811872963d602e8f069b3_20102412';
+$_smarty_tpl->properties['nocache_hash'] = '116312874563d9ff3ea782f0_20654339';
 ?>
  <?php echo $_smarty_tpl->getSubTemplate ("my:admin_header", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2023-01-29 06:23:48
+<?php /* Smarty version 3.1.27, created on 2023-02-01 06:57:10
          compiled from "my:news_edit" */ ?>
 <?php
-/*%%SmartyHeaderCode:120745061563d602e4b9e483_07903119%%*/
+/*%%SmartyHeaderCode:87804111063d9ff36369753_53256203%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7797130eab0897d18b5ea170d9f79f79d34d792e' => 
     array (
       0 => 'my:news_edit',
-      1 => 1674969828,
+      1 => 1675231030,
       2 => 'my',
     ),
   ),
-  'nocache_hash' => '120745061563d602e4b9e483_07903119',
+  'nocache_hash' => '87804111063d9ff36369753_53256203',
   'variables' => 
   array (
     'new' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_63d602e4bcb090_88781281',
+  'unifunc' => 'content_63d9ff36393452_80116847',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_63d602e4bcb090_88781281')) {
-function content_63d602e4bcb090_88781281 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_63d9ff36393452_80116847')) {
+function content_63d9ff36393452_80116847 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '120745061563d602e4b9e483_07903119';
+$_smarty_tpl->properties['nocache_hash'] = '87804111063d9ff36369753_53256203';
 ?>
  <?php echo $_smarty_tpl->getSubTemplate ("my:admin_header", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>

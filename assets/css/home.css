@@ -227,12 +227,6 @@ span {
   margin-bottom: 8px;
 }
 
-/* .classic-bg .classic-inner span {
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 45px;
-} */
-
 @media screen and (max-width: 599.95px) {
   .statistic-content {
     flex-direction: column;
@@ -399,17 +393,6 @@ span {
   z-index: 10;
 }
 
-/* .text-logo .faster::after {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/underline.svg);
-  background-size: 200px;
-
-  position: absolute;
-  display: inline-block;
-} */
-
 @media screen and (max-width: 599.95px) {
   .text-logo {
     align-items: center;
@@ -425,8 +408,6 @@ span {
     margin-top: 45px;
     line-height: normal;
   }
-
-
 }
 
 .join-container {

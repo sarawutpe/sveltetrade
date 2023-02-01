@@ -659,9 +659,6 @@ th {
 /* form auth */
 .form-
 
-/* .min {
-  min-height: 50px;
-} */
 
 /* form-group */
 .form-group {
@@ -966,6 +963,7 @@ form .action {
 /* pagination */
 .pagination {
   display: flex;
+  justify-content: center;
 }
 
 .pagination li {
@@ -1004,6 +1002,38 @@ form .action {
   transform: rotate(90deg);
 }
 
+.pagination .page-item .prev {
+  visibility: hidden;
+}
+
+.pagination .page-item .next {
+  visibility: hidden;
+}
+
+.pagination .page-item .prev::before {
+  font-family: 'FabricMDL2Icons';
+  visibility: visible;
+  content: '\F2DD';
+  display: inline-block;
+  font-size: 20px;
+}
+
+.pagination .page-item .prev.disabled {
+  opacity: 0.5;
+}
+
+.pagination .page-item .next::after {
+  font-family: 'FabricMDL2Icons';
+  visibility: visible;
+  content: '\F2DF';
+  display: inline-block;
+  font-size: 20px;
+}
+
+.pagination .page-item .next.disabled {
+  opacity: 0.5;
+}
+
 /* layout */
 #portal {
   background-color: inherit;
@@ -1016,7 +1046,7 @@ form .action {
 }
 
 .portal-menu {
-  padding: 16px 0;
+  padding: 10px 0;
   background-color: var(--bg);
   height: 128px;
 }
@@ -1046,6 +1076,7 @@ form .action {
 .menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header-nav {
@@ -1087,12 +1118,14 @@ form .action {
 
 .profile-group .text {
   color: #ffffff;
-  margin: 0 16px;
+  margin: 0 10px;
 }
 
 .menu-group {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 #mobile-menu-icon {
@@ -1120,11 +1153,10 @@ form .action {
 
 .menu-item {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   width: 66px;
-  padding: 4px;
   color: #ffffff;
   border: 1px solid transparent;
   border-radius: 8px;
@@ -1144,11 +1176,28 @@ form .action {
 }
 
 .menu-item i {
-  margin-bottom: 4px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 90ms ease;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 6px;
+  background-color: rgba(102, 102, 102, 0.25);
 }
 
-.menu-item:hover {
-  background-color: rgba(102, 102, 102, 0.25);
+.menu-item:hover i {
+  background-color: rgba(102, 102, 102, 0.45);
+  /* border: 1px solid rgba(102, 102, 102, 0.5); */
+  /* transform: scale(0.95, 0.95); */
 }
 
 .menu-item:active {
@@ -1156,7 +1205,7 @@ form .action {
   transform: scale(0.95, 0.95);
 }
 
-.menu-item.active {
+.menu-item.active i {
   background-color: rgba(255, 255, 255, 0.27);
 }
 
@@ -1374,6 +1423,9 @@ input.card-plan:checked + label .card-plan-item #plan-name {
 }
 
 @media screen and (min-width: 900px) {
+  .menu-group {
+    justify-content: flex-end;
+  }
   .profile-group {
     display: flex;
   }

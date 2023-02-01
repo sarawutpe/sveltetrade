@@ -17,7 +17,7 @@
                   <span>History</span>
                 </a>
                 <a href="{"?a=deposit_list"|encurl}" class="menu-item {if $smarty.get.a == "deposit_list"}active{/if}">
-                  <i class="ms-Icon ms-Icon--LineChart fontSize-xl"></i>
+                  <i class="ms-Icon ms-Icon--FullHistory fontSize-xl"></i>
                   <span>Deposit History</span>
                 </a>
                 <a href="{"?a=referals"|encurl}" class="menu-item {if $smarty.get.a == "referals"}active{/if}">

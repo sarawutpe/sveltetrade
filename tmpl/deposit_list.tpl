@@ -11,9 +11,9 @@
                   </tr>
                 {else}
                   <tr>
-                    <td>Date</td>
+                    <td style="min-width: 100px;">Date</td>
                     <td>Amount</td>
-                    <td>Expire in</td>
+                    <td style="min-width: 100px;">Expire in</td>
                     <td>Payment</td>
                     {if $p.use_compound}
                       <td>Compounding Percent</td>
@@ -60,22 +60,23 @@
                   {/foreach}
                 {/if}
               </table>
-              {if $p.total_deposit > 0 || $p.today_profit > 0 || $p.total_profit > 0}
-                <table>
-                  <tr>
-                    <td>Deposited Total:</td>
-                    <td><b>{$p.total_deposit|fiat}</b></td>
-                  </tr>
-                  <tr>
-                    <td>Profit Today:</td>
-                    <td><b>{$p.today_profit|fiat}</b></td>
-                  </tr>
-                  <tr>
-                    <td>Total Profit:</td>
-                    <td><b>{$p.total_profit|fiat}</b></td>
-                  </tr>
-                </table>
-              {/if}
             </div>
+            {if $p.total_deposit > 0 || $p.today_profit > 0 || $p.total_profit > 0}
+              <table>
+                <tr>
+                  <td>Deposited Total:</td>
+                  <td><b>{$p.total_deposit|fiat}</b></td>
+                </tr>
+                <tr>
+                  <td>Profit Today:</td>
+                  <td><b>{$p.today_profit|fiat}</b></td>
+                </tr>
+                <tr>
+                  <td>Total Profit:</td>
+                  <td><b>{$p.total_profit|fiat}</b></td>
+                </tr>
+              </table>
+            {/if}
+
           {/foreach}
 {include file="footer.tpl"}

@@ -1,27 +1,5 @@
+{assign var="allow" value="none"}
+{assign var="meta_title" value=""}
 {include file="header.tpl"}
-
-{loaddata name="last_members" limit=20 var=members}
-
-<h3>Members Last 10</h3><br>
-
-<table cellspacing=1 cellpadding=2 border=0 width=100%>
-<tr>
- <td class=inheader>Username</td>
- <td class=inheader width=200>Reg. Date</td>
- <td class=inheader width=170>Referrer</td>
-</tr>
-{foreach from=$members item=m}
-<tr>
- <td><b>{$m.username|escape:html}</b></td>
- <td><b>{$m.date}</b></td>
- <td><b>{$m.ref_name|escape:html}</b></td>
-</tr>
-{foreachelse}
-<tr>
- <td colspan=3 align=center>No members found</td>
-</tr>
-{/foreach}
-</table>
-
-
+<p>{loaddata name="last_members" limit=20 var=members}</p><h3>Members Last 10</h3><p><br>{foreach from=$members item=m} {foreachelse} {/foreach}&nbsp;</p><figure class="table"><table><tbody><tr><td>Username</td><td>Reg. Date</td><td>Referrer</td></tr><tr><td><strong>{$m.username|escape:html}</strong></td><td><strong>{$m.date}</strong></td><td><strong>{$m.ref_name|escape:html}</strong></td></tr><tr><td colspan="3">No members found</td></tr></tbody></table></figure>
 {include file="footer.tpl"}
