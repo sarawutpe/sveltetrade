@@ -13,7 +13,7 @@
             account and find pin code. Then enter pin code in form bellow</span>
         </div>
         <div class="field">
-          <fluent-text-field class="w-100" type="text" name="pin" autofocus required>
+          <fluent-text-field id="pin" class="w-100" type="text" name="pin" value="" autofocus required>
             Enter pin
           </fluent-text-field>
         </div>
