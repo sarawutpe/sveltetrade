@@ -262,10 +262,10 @@ document.onreadystatechange = () => {
                 printHalfYearlElement.innerText = '$' + (calc * Number(qDays[1])).toFixed(2)
                 printYearlyElement.innerText = '$' + (calc * Number(qDays[2])).toFixed(2)
               } else {
-                printDailyElement.innerText = '-'
-                printMonthlyElement.innerText = '-'
-                printHalfYearlElement.innerText = '-'
-                printYearlyElement.innerText = '-'
+                printDailyElement.innerText = '0'
+                printMonthlyElement.innerText = '0'
+                printHalfYearlElement.innerText = '0'
+                printYearlyElement.innerText = '0'
               }
             }
           }
