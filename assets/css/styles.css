@@ -1485,3 +1485,10 @@ input.card-plan:checked + label .card-plan-item #plan-name {
   background: padding-box linear-gradient(var(--neutral-fill-hover), var(--neutral-fill-hover)),
     border-box var(--neutral-stroke-control-hover);
 }
+
+.payment-form {
+  border: 1px solid #ebebeb;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #fff;
+}

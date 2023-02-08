@@ -9,7 +9,6 @@
           <tr>
             <td>Plan</td>
             <td>{$deposit.name|escape:html}</td>
-            {* <td rowspan=7>{$coin_payment_image}</td> *}
           </tr>
           <tr>
             <td>Profit</td>
@@ -83,7 +82,7 @@
         </table>
       </div>
 
-      <div class="payment_form">
+      <div class="payment-form">
         {$payment_form}
       </div>
     {/if}
