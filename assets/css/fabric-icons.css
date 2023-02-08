@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'FabricMDL2Icons';
+  src: url('../fonts/fabric-icons.woff') format('woff');
+}
+
+.ms-Icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: 'FabricMDL2Icons';
+  font-style: normal;
+  font-weight: normal;
+}
+
+.ms-Icon--AuthenticatorApp:before {
+  content: '\F6B1';
+}
+.ms-Icon--Bank:before {
+  content: '\E825';
+}
+.ms-Icon--Cancel:before {
+  content: '\E711';
+}
+.ms-Icon--CheckMark:before {
+  content: '\E73E';
+}
+.ms-Icon--Delete:before {
+  content: '\E74D';
+}
+.ms-Icon--FullHistory:before {
+  content: '\F31C';
+}
+.ms-Icon--Home:before {
+  content: '\E80F';
+}
+.ms-Icon--Info:before {
+  content: '\E946';
+}
+.ms-Icon--Info12:before {
+  content: '\E55A';
+}
+.ms-Icon--InfoSolid:before {
+  content: '\F167';
+}
+.ms-Icon--LineChart:before {
+  content: '\E9E6';
+}
+.ms-Icon--Money:before {
+  content: '\EAFD';
+}
+.ms-Icon--NavigateBack:before {
+  content: '\F2DD';
+}
+.ms-Icon--NavigateForward:before {
+  content: '\F2DF';
+}
+.ms-Icon--Settings:before {
+  content: '\E713';
+}
+.ms-Icon--SignOut:before {
+  content: '\F3B1';
+}
+.ms-Icon--SkypeCircleCheck:before {
+  content: '\EF7D';
+}
+.ms-Icon--SplitObject:before {
+  content: '\F547';
+}
+.ms-Icon--StatusErrorFull:before {
+  content: '\EB90';
+}
+.ms-Icon--WaffleOffice365:before {
+  content: '\F4E0';
+}
