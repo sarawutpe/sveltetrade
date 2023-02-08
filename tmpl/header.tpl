@@ -12,7 +12,7 @@
   <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <title>{$settings.site_name|default:"Svelletrade"} - {$meta_title|default:""}</title>
+  <title>{$settings.site_name|default:"Sveltetrade"} - {$meta_title|default:""}</title>
   <link rel="stylesheet" href="./assets/css/fabric-icons.css" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <script type="module" src="./assets/js/web-components.min.js"></script>
