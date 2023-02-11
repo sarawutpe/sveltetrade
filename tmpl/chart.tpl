@@ -1,6 +1,6 @@
 <div id="chart"></div>
 
-{loaddata name="transactions" type="earning" var="trans"}
+{loaddata name="transactions" user=$userinfo.id type="earning" var="trans"}
 {$nowMonth = $smarty.now|date_format:"%m"}
 {$nowYear = $smarty.now|date_format:"%y"}
 
@@ -34,8 +34,6 @@
       {assign var="initialDec" value=$initialDec+$t.amount}
     {/if}
   {/if}
-{foreachelse}
-  console.log("No transactions found")
 {/foreach}
 
 {if 1 <= $nowMonth}
@@ -62,7 +60,6 @@
   {append var='initialAmount' value=$initialJun|default:0|string_format:"%.2f"}
   {append var='initialDate' value='Jun'}
 {/if}
-
 {if 7 <= $nowMonth}
   {append var='initialAmount' value=$initialJul|default:0|string_format:"%.2f"}
   {append var='initialDate' value='Jul'}
@@ -89,8 +86,9 @@
 {/if}
 
 <script>
-  const amountData = {$initialAmount|json_encode}
-  const dateData = {$initialDate|json_encode}
+  const amountData = {$initialAmount|json_encode} || []
+  const dateData = {$initialDate|json_encode} || []
+
   var options = {
     series: [{
       name: "Earned",
