@@ -1,5 +1,5 @@
             <div class="menu-group">
-              {if $userinfo.logged == 1}
+              {if $userinfo.logged != 0}
                 <a href="{"?a=account"|encurl}" class="menu-item {if $smarty.get.a == "account"}active{/if}">
                   <i class="ms-Icon ms-Icon--Home fontSize-xl"></i>
                   <span>Home</span>

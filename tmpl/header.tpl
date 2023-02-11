@@ -41,7 +41,7 @@
         <div class="menu">
           <div class="header-nav">
             <div class="portal-logo">
-              <a href="{"/"|encurl}">
+              <a href="{"?a=account"|encurl}">
                 <img src="./assets/img/logo.png" width="180px" height="22px" alt="logo" />
               </a>
             </div>
