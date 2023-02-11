@@ -195,7 +195,7 @@
                   </div>
                 </div>
                 <div class="field mb-3">
-                  <fluent-select disabled={!$have_available} class="w-100 z-10" name="ec" position="below">
+                  <fluent-select class="w-100 z-10" name="ec" position="below">
                     {assign var="wfch" value=1}
                     {foreach from=$ps item=p}
                     {if $p.available > 0}

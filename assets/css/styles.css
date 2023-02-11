@@ -1437,6 +1437,11 @@ input.card-plan:checked + label .card-plan-item #plan-name {
   display: inline-block;
 }
 
+.deposit-process-wrap,
+.deposit-cancel-wrap {
+  display: inline-block;
+}
+
 .deposit-process-wrap {
   color: #ffffff;
 }
